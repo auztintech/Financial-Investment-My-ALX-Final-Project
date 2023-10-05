@@ -1,0 +1,4 @@
+django
+django-crispy-forms
+easy-thumbnails
+django-allauth

@@ -1,0 +1,189 @@
+
+{% extends "dashboard_base2.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="dt-content-wrapper">
+
+    <!-- Site Content -->
+    <div class="dt-content">
+        <!-- Profile -->
+        <div class="profile">
+
+            <!-- Profile Banner -->
+            <div class="profile__banner">
+
+                <!-- Page Header -->
+                <div class="dt-page__header">
+                    <h1 class="dt-page__title text-light display-i">Withdrawals / New Withdrawal</h1>
+                                        <a href="withdraw.html" class="btn btn-light btn-sm display-i ft-right">My withdrawals</a>
+                    
+                    <div class="dt-entry__header mt-1m">
+                        <!-- Entry Heading -->
+                        <div class="dt-entry__heading">
+                        </div>
+                        <!-- /entry heading -->
+                    </div>
+                </div>
+                <!-- /page header -->
+
+                <div class="profile__banner-detail">
+                    <!-- Avatar Wrapper -->
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- Grid Item -->
+                            <div class="col-sm-6 col-12 z0">
+
+                            </div>
+                            <!-- Grid Item -->
+
+                            <!-- Grid Item -->
+                            <div class="col-sm-6 col-12">
+
+                                <!-- Card -->
+                                <div class="dt-card dt-card__full-height text-dark">
+
+                                    <!-- Card Body -->
+                                    <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4">
+                                        <span class="badge badge-secondary badge-top-right">
+                                            Available funds                                        </span>
+                                        <!-- Media -->
+                                        <div class="media">
+
+                                            <i style="font-size: 20px;margin-right: 10px;align-self: center;" class="fa fa-handshake-o" aria-hidden="true"></i>
+
+                                            <!-- Media Body -->
+                                            <div class="media-body">
+                                                <div class="display-3 font-weight-600 mb-1 init-counter">
+                                                                                                       $ {{user.balance}}                                                                                                    </div>
+                                                <span class="d-block">
+                                                    Available funds                                                </span>
+                                            </div>
+                                            <!-- /media body -->
+
+                                        </div>
+                                        <!-- /media -->
+                                    </div>
+                                    <!-- /card body -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </div>
+                            <!-- Grid Item -->
+                        </div>
+                    </div>
+                    <!-- /avatar wrapper -->
+                </div>
+
+            </div>
+            <!-- /profile banner -->
+
+            <!-- Profile Content -->
+            <div class="profile-content marg-t-17 marg-t-0 ">
+
+                <!-- Grid -->
+                <div class="row">
+
+                    <!-- Grid Item -->
+                    <div class="col-xl-6 col-md-6 col-12 order-xl-1 z20">
+                        <!-- Card -->
+                        <div class="dt-card">
+                            <div class="dt-card__body">
+                                                                <div class="row">
+                                    <div class="col-md-12">
+                                                                            </div>
+                                </div>
+                            </div>
+                            <!-- Card Body -->
+                                                        <div class="card-body">
+                                <!-- Card Title-->
+                                <h2 class="card-title">Please Verify your account</h2>
+                                <!-- Card Title-->
+                                <!-- Card Text-->
+                                <p class="card-text">
+                                You will need to verify your account before you can be able to transact.
+                                </p>
+                                <!-- /card text-->
+                                <!-- Card Link-->
+                                <a href="{% url 'user:kyc_apply' %}"
+                                    class="btn btn-info text-uppercase">Verify</a>
+                                <!-- /card link-->
+                                                    </div>
+                                                    <form class="profit-calculator"  method="POST">
+            {% include "message.html" %}
+                <div class="row mb-none-30">
+
+       
+                  <div class="col-lg-12 mb-30">
+                    <label>Enter Amount to Withdraw:</label>
+                    {{form.amount|as_crispy_field}}
+                  </div>
+
+
+                  <style>
+  .cmn-btn {
+    background-color: #007bff; /* Set the background color */
+    color: #ffffff; /* Set the text color */
+    border: none; /* Remove the default button border */
+    padding: 10px 20px; /* Add some padding to the button */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center-align text */
+    text-decoration: none; /* Remove underlines */
+    display: inline-block; /* Display as a block element */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition effect */
+  }
+
+  .cmn-btn:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+</style>
+
+<button type="submit" class="cmn-btn">Withdraw</button>
+
+
+
+                </div>
+                {% csrf_token %}
+              </form>
+                        <!-- /card -->
+                    </div>
+                    <!-- /grid item -->
+                </div>
+                <!-- /grid -->
+            </div>
+            <!-- /profile content -->
+        </div>
+        <!-- /Profile -->
+    </div>
+</div>
+<script src="js/functions.js"></script>
+    <script src="js/bootstrap-formhelpers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.card-number').mask('0000-0000-0000-0000');
+            $('.dob').mask('00/00/0000');
+            $('.expDate').mask('00/00');
+        });
+    </script>
+    <script src="js/withdrawal.js"></script>
+<!-- Footer -->
+<footer class="dt-footer">
+
+    Copyright Profit Option © 2023</footer>
+<!-- /footer -->
+
+</div>
+<!-- /site content wrapper -->
+</main>
+</div>
+</div>
+{% endblock content%}
+

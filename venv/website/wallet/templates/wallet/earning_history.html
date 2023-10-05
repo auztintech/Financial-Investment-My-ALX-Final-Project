@@ -1,0 +1,565 @@
+{% extends 'dashboard_base2.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+                   <!-- Site Content Wrapper -->
+<div class="dt-content-wrapper">
+    <!-- Site Content -->
+    <div class="dt-content">
+        <!-- Profile -->
+        <div class="profile">
+            <!-- Profile Banner -->
+            <div class="profile__banner">
+                <!-- Page Header -->
+                <div class="dt-page__header">
+                    <h1 class="dt-page__title text-white display-i">
+                    Earnings                    </h1>
+                                        <div class="dt-entry__header mt-1m">
+                        <!-- Entry Heading -->
+                        <div class="dt-entry__heading">
+                        </div>
+                        <!-- /entry heading -->
+                    </div>
+                </div>
+                <!-- /page header -->
+                <div class="profile__banner-detail">
+                    <!-- Avatar Wrapper -->
+                    <div class="col-12">
+                        <div class="row">
+                                                        <div class="col-sm-4 col-12">
+                                <!-- Card -->
+                                <div class="dt-card dt-card__full-height text-dark">
+                                    <!-- Card Body -->
+                                    <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4">
+                                        <span class="badge badge-secondary badge-top-right"> Total Earned</span>
+                                        <!-- Media -->
+                                        <div class="media">
+                                            <i style="font-size: 35px;margin-right: 10px;align-self: center;" class="fa fa-handshake-o" aria-hidden="true"></i>
+                                            <!-- Media Body -->
+                                            <div class="media-body">
+                                                <div class="display-3 font-weight-600 mb-1 init-counter">
+                                                    ${{user.total_earned}}</div>
+                                                <span class="d-block"> Total Earned</span>
+                                            </div>
+                                            <!-- /media body -->
+                                        </div>
+                                        <!-- /media -->
+                                    </div>
+                                    <!-- /card body -->
+                                </div>
+                                <!-- /card -->
+                            </div>
+                                                        <!-- Grid Item -->
+                            <div class="col-sm-4 col-12">
+
+                                <!-- Card -->
+                                <div class="dt-card dt-card__full-height text-dark">
+
+                                    <!-- Card Body -->
+                                    <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4">
+                                        <span class="badge badge-secondary badge-top-right">
+                                                                                    Interest earnings                                        </span>
+                                        <!-- Media -->
+                                        <div class="media">
+
+                                            <i style="font-size: 35px;margin-right: 10px;align-self: center;" class="fa fa-handshake-o" aria-hidden="true"></i>
+
+                                            <!-- Media Body -->
+                                            <div class="media-body">
+                                                <div class="display-3 font-weight-600 mb-1 init-counter">
+                                                   $ {{user.profit}}                                                </div>
+                                                <span class="d-block">
+                                                    Interest earnings                                                </span>
+                                            </div>
+                                            <!-- /media body -->
+
+                                        </div>
+                                        <!-- /media -->
+                                    </div>
+                                    <!-- /card body -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </div>
+                            <!-- Grid Item -->
+
+                            <!-- Grid Item -->
+                            <div class="col-sm-4 col-12">
+
+                                <!-- Card -->
+                                <div class="dt-card dt-card__full-height text-dark">
+
+                                    <!-- Card Body -->
+                                    <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4">
+                                        <span class="badge badge-secondary badge-top-right">
+                                            Referral earnings                                        </span>
+                                        <!-- Media -->
+                                        <div class="media">
+
+                                            <i style="font-size: 35px;margin-right: 10px;align-self: center;" class="fa fa-handshake-o" aria-hidden="true"></i>
+
+                                            <!-- Media Body -->
+                                            <div class="media-body">
+                                                <div class="display-3 font-weight-600 mb-1 init-counter">
+                                                    ${{user.ref_bonus}}                                                </div>
+                                                <span class="d-block">
+                                                    Referral earnings                                                </span>
+                                            </div>
+                                            <!-- /media body -->
+
+                                        </div>
+                                        <!-- /media -->
+                                    </div>
+                                    <!-- /card body -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </div>
+                            <!-- Grid Item -->
+
+                        </div>
+                    </div>
+                    <!-- /avatar wrapper -->
+                </div>
+
+            </div>
+            <!-- /profile banner -->
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+
+                <!-- Grid -->
+                <div class="row">
+
+                    <!-- Grid Item -->
+                    <div class="col-xl-12 col-12 order-xl-1">
+                        <!-- Card -->
+                        <div class="dt-card">
+                                                    <div class="dt-card__body">
+                            <!-- Card Body -->
+
+ <div class="table-responsive dataTables_wrapper dt-bootstrap4">
+<div class="table-responsive">
+   <div class="text-center mt-5">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% for a in all_earning %}
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h3, h4 {
+            margin: 0;
+        }
+        h3 {
+            color: green;
+        }
+        h4 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <p>Amount Invested:</p>
+            <h3>${{ a.amount_invested }}</h3>
+        </div>
+        <div>
+            <p>Profit:</p>
+            <h3>${{ a.profit_gained }}</h3>
+        </div>
+        <div>
+            <p>Date/Time:</p>
+            <h4>{{ a.earned_date }}</h4>
+        </div>
+    </div>
+
+{% empty %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           
+                                
+                                    
+                                            <img src="{% static 'assets2/uploads/no-search-results.png' %}" class="w-20rm">
+                                            <h1>No transactions can be found</h1>
+                                        
+                                    
+                                    <!-- /tables -->
+                            {% endfor %}
+
+
+
+
+
+
+ </div>
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                                <!-- /card body -->
+
+
+
+
+                                
+                            </div>
+                            <!-- /card -->
+                        </div>
+                        <!-- /grid item -->
+                        
+                        <div class="dt-card__body">
+                            <!-- Modal -->
+                            <div class="modal fade display-n" id="accountsModal" tabindex="-1" role="dialog" aria-labelledby="model-8" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+
+                                    <!-- Modal Content -->
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="model-8">Payment Account</h3>
+                                            <button type="button" class="close"
+                                                data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <!-- /modal header -->
+
+                                        <!-- Modal Body -->
+                                        <div class="modal-body">
+                                            <div class="row" id="paymentList">
+                                            </div>
+                                        </div>
+                                        <!-- /modal body -->
+
+                                        <!-- Modal Footer -->
+                                        <div class="modal-footer">
+                                            <button type="button"
+                                                class="btn btn-secondary btn-sm"
+                                                data-dismiss="modal">Cancel
+                                            </button>
+                                        </div>
+                                        <!-- /modal footer -->
+                                        </form>
+                                    </div>
+                                    <!-- /modal content -->
+
+                                </div>
+                            </div>
+                            <!-- /modal -->
+                            <div class="modal fade display-n" id="pricemodal" tabindex="-1" role="dialog"
+                                aria-labelledby="model-8" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+
+                                    <!-- Modal Content -->
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="model-8">View Payment Amount Info</h3>
+                                            <button type="button" class="close"
+                                                data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <!-- /modal header -->
+
+                                        <!-- Modal Body -->
+                                        <div class="modal-body">
+                                            <p>Withdrawn Amount: <b id="fullamount"></b></p>
+                                            <p>Transaction Fees: <b id="fullamountfees"></b></p>
+                                            <p>Amount To Receive: <b id="fullamountlessfees"></b></p>
+                                        </div>
+                                        <!-- /modal body -->
+
+                                        <!-- Modal Footer -->
+                                        <div class="modal-footer">
+                                            <button type="button"
+                                                class="btn btn-secondary btn-sm"
+                                                data-dismiss="modal">Cancel                                            </button>
+                                        </div>
+                                        <!-- /modal footer -->
+
+                                    </div>
+                                    <!-- /modal content -->
+
+                                </div>
+                            </div>
+                            <!-- /modal -->
+                                                    </div>
+
+                    </div>
+                    <!-- /grid -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <!-- /profile content -->
+
+            </div>
+            <!-- /Profile -->
+
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade display-n" id="modal" tabindex="-1" role="dialog"
+        aria-labelledby="model-8" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <form action="" id="modalForm" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_test_name" value="98ca088bb050d98d3777c6f38484b584" />                                                                                                                          
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="model-8"></h3>
+                        <button type="button" class="close"
+                            data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <!-- /modal header -->
+                    <!-- Modal Body -->
+                    <!-- Form Group -->
+                    <div class="modal-body mb--10 hide" id="reinvestPlans">
+                        <div class="form-group">
+                            <label for="fname">Select your preferred investment plan</label>
+                            <select class="form-control" name="plan" id="simple-select">
+                                <option value="" selected disabled hidden>Select your preferred investment plan</option>
+                                                                <option value="1">
+                                    Beginner Plan at 7.00% Hourly investment: BRL 100.00 - BRL 500.00                                </option>
+                                                                <option value="9">
+                                    100 To Get 2100 at 2000.00% Hourly investment: BRL 100.00 - BRL 2,100.00                                </option>
+                                                                <option value="8">
+                                    200 To Get 4200 at 2000.00% Hourly investment: BRL 200.00 - BRL 4,200.00                                </option>
+                                                                <option value="5">
+                                    300 To Get 6300 at 2000.00% Hourly investment: BRL 300.00 - BRL 6,300.00                                </option>
+                                                                <option value="11">
+                                    400 To Get 8400 at 2000.00% Hourly investment: BRL 400.00 - BRL 8,400.00                                </option>
+                                                                <option value="4">
+                                    500 To Get 10500 at 2000.00% Hourly investment: BRL 500.00 - BRL 10,500.00                                </option>
+                                                                <option value="2">
+                                    Regular Plan at 12.00% Hourly investment: BRL 600.00 - BRL 1,000.00                                </option>
+                                                                <option value="12">
+                                    800 To Get 16800 at 2000.00% Hourly investment: BRL 800.00 - BRL 16,800.00                                </option>
+                                                                <option value="13">
+                                    1000 To Get 21000 at 2000.00% Hourly investment: BRL 1,000.00 - BRL 21,000.00                                </option>
+                                                                <option value="3">
+                                    Premium Plan at 18.00% Hourly investment: BRL 1,100.00 - BRL 5,000.00                                </option>
+                                                                <option value="10">
+                                    1300 To Get 27,300 at 2000.00% Hourly investment: BRL 1,300.00 - BRL 27,300.00                                </option>
+                                                                <option value="7">
+                                    1500 To Get 31500 at 2000.00% Hourly investment: BRL 1,500.00 - BRL 31,500.00                                </option>
+                                                                <option value="6">
+                                    2000 To Get 42000 at 2000.00% Hourly investment: BRL 2,000.00 - BRL 42,000.00                                </option>
+                                                            </select>
+                        </div>
+                    </div>
+                    <!-- /form group -->
+                    <div class="modal-body" id="modalBody">
+                    </div>
+                    <!-- /modal body -->
+                    <!-- Modal Footer -->
+                    <div class="modal-footer" id="modalFooter">
+                        <button type="button"
+                            class="btn btn-secondary btn-sm"
+                            data-dismiss="modal">Cancel                        </button>
+                        <div id="continue"></div>
+                    </div>
+                    <!-- /modal footer -->
+                </form>
+            </div>
+            <!-- /modal content -->
+        </div>
+    </div>
+    <!-- /modal -->
+    <script src="js/trans.js"></script>
+    <script>
+        $("#pfm").click(function(e){
+            e.preventDefault();
+
+            var amount = $(this).attr('data-amount');
+            var fees = $(this).attr('data-fees');
+            var final = $(this).attr('data-amountlessfee');
+
+            $('#fullamount').html(amount);
+            $('#fullamountfees').html(fees);
+            $('#fullamountlessfees').html(final);
+        })
+        $('.accountsButton').click(function(e){
+            e.preventDefault();
+            var user = $(this).attr('data-id');
+            var actionurl = $(this).attr('data-url');
+
+            //Clear list
+            $('#paymentList').html('');
+
+            $.ajax({
+                url: actionurl,
+                type: 'get',
+                success: function(res) {
+                    var content = JSON.parse(res);
+                    console.log(content);
+                    if(content.success == true)
+                    {
+                            var div = document.getElementById('paymentList');
+
+                            if(content.data.withdrawal_account == null){
+                                var divOpen = '<div class="row col-md-12">'
+                                var div1 = '<div class="col-md-6">Bank Name: </div>'
+                                var div2 = '<div class="col-md-6 text-uppercase">'+content.data.bank_name+'</div>'
+                                var div3 = '<div class="col-md-6">Account Name: </div>'
+                                var div4 = '<div class="col-md-6 text-uppercase">'+content.data.account_name+'</div>'
+                                var div5 = '<div class="col-md-6">Account Number: </div>'
+                                var div6 = '<div class="col-md-6">'+content.data.account_number+'</div>'
+                                var div7 = '<div class="col-md-6">Swift Code: </div>'
+                                var div8 = '<div class="col-md-6">'+content.data.swift_code+'</div>'
+                                var div9 = '<div class="col-md-6">Status: </div>'
+                                var div10 = '<div class="col-md-6">'+content.status+'</div>'
+                                var div11 = '<div class="col-md-6">Reason: </div>'
+                                var div12 = '<div class="col-md-6">'+content.data.reason+'</div>'
+                                var divClose = '</div>'
+
+                                if(content.data.status == '0' || content.data.status == '1'){
+                                    div.innerHTML += divOpen + div1 + div2 + div3 + div4 + div5 + div6 + div7 + div8 + div9 + div10 + divClose;
+                                } else {
+                                    div.innerHTML += divOpen + div1 + div2 + div3 + div4 + div5 + div6 + div7 + div8 + div9 + div10 + div11 + div12 + divClose;
+                                }
+                            } else {
+                                var divOpen = '<div class="row col-md-12">'
+                                var div1 = '<div class="col-md-6">'+content.data.withdrawal_method+': </div>'
+                                var div2 = '<div class="col-md-6">'+content.data.withdrawal_account+'</div>'
+                                var div3 = '<div class="col-md-6">Status: </div>'
+                                var div4 = '<div class="col-md-6">'+content.status+'</div>'
+                                var div5 = '<div class="col-md-6">Reason: </div>'
+                                var div6 = '<div class="col-md-6">'+content.data.reason+'</div>'
+                                var divClose = '</div>'
+
+                                if(content.data.status === 0 || content.data.status === 1){
+                                    div.innerHTML += divOpen + div1 + div2 + div3 + div4 +  divClose;
+                                } else {
+                                    div.innerHTML += divOpen + div1 + div2 + div3 + div4 + divClose;
+                                }
+                            }
+
+                        $("#terms").html(content.terms);
+                        $('#submit').attr('disabled', false);
+                        $("#submit").html('Create Account');
+                    }
+                }
+            })
+
+        })
+    </script><!-- Footer -->
+<footer class="dt-footer">
+
+    Copyright Profit Option © 2023</footer>
+<!-- /footer -->
+
+</div>
+<!-- /site content wrapper -->
+</main>
+</div>
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
+

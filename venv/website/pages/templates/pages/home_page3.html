@@ -1,0 +1,885 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% if page_title %}{{ page_title }}-{% endif %}{{ site_name }}-{{tagline}}{% endblock %}</title>
+    <base  src="index-2.html" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/icomoon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bitneo-style.css' %}">
+    <script src="{% static 'assets/js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon.png' %}">
+</head>
+
+<body>
+    <div class="wrapper bg_gradient">
+        <div class="nk-ovm nk-ovm-repeat nk-ovm-fixed shape-i">
+        </div>
+        <div class="nk-ovm shape-z"></div>
+        <section class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="indexbc14bc14.html?a=home" class="logo">
+                        <img src="{% static 'assets/img/logo.png' %}" alt="TopTosi">
+                    </a>
+                    <div class="telegram">
+                        <img src="{% static 'assets/img/telegram.svg"> <a href="#"> Telegram </a>
+                    </div>
+                    <ul class="menu__main">
+                        <li>
+                            <a href="{% url 'pages:home_page' %}" class="menu__link">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pages:privacy_page' %}" class="menu__link">
+                                Terms
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pages:faq_page' %}" class="menu__link">
+                                FAQs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pages:contact_page' %}" class="menu__link pr-0">
+                              
+                               Contact Us
+                            </a> 
+                        </li>
+                    </ul>
+                    <div class="head__btn">
+                                                    <a href="{% url 'account_login' %}" class="btn__login"> Login </a>
+                            <a href="{% url 'account_signup' %}" class="btn__signup"> Signup </a>
+                                            </div>
+                </div>
+            </div>
+        </section>
+
+
+<section class="slide">
+    <div class="container">
+        <div class="slide__inner">
+            <div class="slide__left">
+                <h3><strong>AUZTIN</strong> INVESTMENT SITE</h3>
+                <span>Dreams come true when you invest with us.</span>
+                <div class="slide__left--btn">
+                    <a href="{% url 'account_signup' %}" class="about__btn--btn"> Get Started </a>
+                </div>
+            </div>
+            <div class="slide__right">
+                <img src="{% static 'assets/img/bitneo.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="inv">
+    <div class="container">
+        <div class="inv__plans">
+            <div class="inv__plans--item">
+                <div class="inv__ic">
+                    <img src="{% static 'assets/img/p2.png' %}">
+                </div>
+                <div class="inv__percent">
+                    7%
+                </div>
+                <div class="inv__daily">
+                    DAILY FOREVER
+                </div>
+                <div class="inv__min">
+                    <div class="inv__min--txt">Min: <span>$10</span></div>
+                    <div class="inv__min--txt">Max: <span>$999</span></div>
+                </div>
+            </div>
+            <div class="inv__plans--item">
+                <div class="inv__ic">
+                    <img src="{% static 'assets/img/p3.png' %}">
+                </div>
+                <div class="inv__percent">
+                    8%
+                </div>
+                <div class="inv__daily">
+                    DAILY FOREVER
+                </div>
+                <div class="inv__min">
+                    <div class="inv__min--txt">Min: <span>$1001</span></div>
+                    <div class="inv__min--txt">Max: <span>$3000</span></div>
+                </div>
+            </div>
+            <div class="inv__plans--item">
+                <div class="inv__ic">
+                    <img src="{% static 'assets/img/p4.png' %}">
+                </div>
+                <div class="inv__percent">
+                    9%
+                </div>
+                <div class="inv__daily">
+                    DAILY FOREVER
+                </div>
+                <div class="inv__min">
+                    <div class="inv__min--txt">Min: <span>$3001</span></div>
+                    <div class="inv__min--txt">Max: <span>$6000</span></div>
+                </div>
+            </div>
+            <div class="inv__plans--item">
+                <div class="inv__ic">
+                    <img src="{% static 'assets/img/p5.png' %}">
+                </div>
+                <div class="inv__percent">
+                    10%
+                </div>
+                <div class="inv__daily">
+                    DAILY FOREVER
+                </div>
+                <div class="inv__min">
+                    <div class="inv__min--txt">Min: <span>$6001</span></div>
+                    <div class="inv__min--txt">Max: <span>$10000</span></div>
+                </div>
+            </div>
+            <div class="inv__plans--item">
+                <div class="inv__ic">
+                    <img src="{% static 'assets/img/p6.png' %}">
+                </div>
+                <div class="inv__percent">
+                    12%
+                </div>
+                <div class="inv__daily">
+                    DAILY FOREVER
+                </div>
+                <div class="inv__min">
+                    <div class="inv__min--txt">Min: <span>$10001</span></div>
+                    <div class="inv__min--txt">Max: <span>$250000</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="inv__cal">
+    <div class="container">
+        <div class="plans__cal">
+            <div class="plans__cal--icon">
+                <img src="{% static 'assets/img/cal_ic.png' %}">
+            </div>
+            <div class="plans__cal--txt">
+                PROFIT
+                <strong>CALCULATE</strong>
+            </div>
+            <div class="plans__cal--box">
+                <div class="cal__input">
+                    <label>I Invest (USD)</label>
+                    <input type="text" name="cal__amount" id="cal__amount" class="cal__input--input" value="0">
+                </div>
+                <div class="cal__result">
+                    <div class="cal__result--item">
+                        <div class="cal__result--text">
+                            DAILY PROFIT
+                        </div>
+                        <div class="cal__result--val" id="calc_daily">
+                            $0.00
+                        </div>
+                    </div>
+                    <div class="cal__result--item">
+                        <div class="cal__result--text">
+                            WEEKLY PROFIT
+                        </div>
+                        <div class="cal__result--val" id="calc_weekly">
+                            $0.00
+                        </div>
+                    </div>
+                    <div class="cal__result--item">
+                        <div class="cal__result--text">
+                            MONTHLY PROFIT
+                        </div>
+                        <div class="cal__result--val" id="calc_monthly">
+                            $0.00
+                        </div>
+                    </div>
+                    <div class="cal__result--item mr-0">
+                        <div class="cal__result--text">
+                            YEARLY PROFIT
+                        </div>
+                        <div class="cal__result--val" id="calc_yearly">
+                            $0.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="invfea">
+    <div class="container">
+        <div class="invfea__flex">
+            <div class="invfea__item">
+                <div class="invfea__item--icon">
+                    <img src="{% static 'assets/img/plan_ic1.png' %}">
+                </div>
+                <div class="invfea__item--text">
+                    PROFIT <span>RELIABILITY</span>
+                </div>
+            </div>
+            <div class="invfea__item">
+                <div class="invfea__item--icon">
+                    <img src="{% static 'assets/img/plan_ic2.png' %}">
+                </div>
+                <div class="invfea__item--text">
+                    INSTANT <span>WITHDRAW</span>
+                </div>
+            </div>
+            <div class="invfea__item">
+                <div class="invfea__item--icon">
+                    <img src="{% static 'assets/img/plan_ic3.png' %}">
+                </div>
+                <div class="invfea__item--text">
+                    MUTIPLE <span>CRYPTOCURRENCY</span>
+                </div>
+            </div>
+            <div class="invfea__item">
+                <div class="invfea__item--icon">
+                    <img src="{% static 'assets/img/plan_ic4.png' %}">
+                </div>
+                <div class="invfea__item--text">
+                    NO HIDDEN <span>FEES</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+
+        <div class="about__content">
+            <div class="about__left">
+                <div class="about__text1">aUZTIN INVESTMENT SITE</div>
+                <div class="about__text2">Welcome to AUZTIN INVESTMENT SITE - Dreams come true when you invest with us.</div>
+                <div class="about__text3">AUZTIN INVESTMENT SITE is a Leader in Cryptocurrency investment. We operates daily trading
+                    of Crypto by its own expertise trading methods, and generates huge profits daily from the total
+                    funds collected.
+                    However, there are still some questions— around reservations on investing in newer markets that
+                    appear volatile.
+                    The best way for new or hesitant investors to enter would be by hedging their returns and starting
+                    slow. AUZTIN INVESTMENT SITE is a company that helps you trading cryptocurrency and does not require investors must
+                    have any knowledge about cryptocurrency trading before
+                    We assure great return of stable interest daily, with any problem at all. You are in the right
+                    place, if you wanted to ever earn daily profits. Invest today and start your earning engine now.
+                </div>
+            </div>
+            <div class="about__right">
+                <img src="{% static 'assets/img/aboutimg.png' %}">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="stat">
+    <div class="nk-ovm shape-t"></div>
+    <div class="container">
+        <div class="main__title">
+            <span>Company Statistic</span>
+        </div>
+        <div class="infobox">
+            <div class="infobox__item">
+                <div class="infobox__item--icon">
+                    <img src="{% static 'assets/img/stat1.png' %}">
+                </div>
+                <div class="infobox__item--content">
+                    <div class="info__box--title">
+                        Runing Days
+                    </div>
+                    
+                    <span>111</span>
+                </div>
+            </div>
+            <div class="infobox__item">
+                <div class="infobox__item--icon">
+                    <img src="{% static 'assets/img/stat4.png' %}">
+                </div>
+                <div class="infobox__item--content">
+                    <div class="info__box--title">
+                        TOTAL ACCOUNT
+                    </div>
+                    
+                    <span>5713</span>
+                </div>
+            </div>
+            <div class="infobox__item">
+                <div class="infobox__item--icon">
+                    <img src="{% static 'assets/img/stat3.png' %}">
+                </div>
+                <div class="infobox__item--content">
+                    <div class="info__box--title">
+                        TOTAL DEPOSITS
+                    </div>
+                    
+                    <span>$200295609.56</span>
+                </div>
+            </div>
+            <div class="infobox__item">
+                <div class="infobox__item--icon">
+                    <img src="{% static 'assets/img/stat2.png' %}">
+                </div>
+                <div class="infobox__item--content">
+                    <div class="info__box--title">
+                        TOTAL WITHDRAW
+                    </div>
+                    
+                    <span>$2738995.20</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat__box">
+            <div class="stat__item">
+                <div class="stat__item--title infobox__item--icon1">
+                    TOP INVESTORS
+                </div>
+                <div class="stat__item--content">
+                                            
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Vikrantsharma</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $92649005.72
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>kamil4life</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $86838726.30
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Gaura</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $10424651.87
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Ems0711</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $4845913.30
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>sahota707</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $1273963.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>singhk2</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $639296.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Chacha1969</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $134015.45
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Kerondtrini</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $133407.17
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Bittu05</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $125766.58
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Prestupnik</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $120010.23
+                                </span>
+                            </div>
+                                                            </div>
+            </div>
+            <div class="stat__item">
+                <div class="stat__item--title infobox__item--icon2">
+                    TOP REFERRALS
+                </div>
+                <div class="stat__item--content">
+                    
+                                            
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Lexgroup</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                        
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>BankOfJharol</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                        
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Msullivan</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                        
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>HyipDirectionCom</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                        
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Maxcuba</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                        
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Mitsy1010</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                        
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Afolayan01</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                        
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Bestinvestor_ru</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                        
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>Anatolii</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                        
+                            <div class="stat__line">
+                                <span class="stat__line--username">
+                                    <p>CryptoMuscle</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                
+                                </span>
+                            </div>
+                                                            </div>
+            </div>
+            <div class="stat__item">
+                <div class="stat__item--title infobox__item--icon3">
+                    LAST DEPOSITS
+                </div>
+                <div class="stat__item--content">
+                                            
+                                <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>sahota7**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $999.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>medomo**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $3500.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>sahota7**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $999.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>sahota7**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $999.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>sahota7**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $999.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>sahota7**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $999.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>sahota7**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $999.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>sahota7**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $999.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>Scott44**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $550.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>Vikrantshar**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $211130.06
+                                </span>
+                            </div>
+                                                            </div>
+            </div>
+            <div class="stat__item">
+                <div class="stat__item--title infobox__item--icon4">
+                    LAST WITHDRAWAL
+                </div>
+                <div class="stat__item--content">
+                                            
+                                 <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>rjames**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $100.87
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                               <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>marcel20**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $635.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>Novisiph**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $20.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>Khazi**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $3.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>medomo**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $50.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>Kerondtri**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $1000.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>Elishama3**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $55.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>Gabriel**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $30.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>Akb**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $300.00
+                                </span>
+                            </div>
+                                                    <div class="stat__line">
+                                <span class="stat__line--img">
+                                    <img src="{% static 'assets/img/48.png' %}">
+                                </span>
+                                <span class="stat__line--username">
+                                    <p>Rgracia19**</p>
+                                </span>
+                                <span class="stat__line--amount">
+                                    $122.00
+                                </span>
+                            </div>
+                                                            </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<section class="aff">
+    <div class="ui-mask"></div>
+    <div class="container">
+        <div class="nk-ovm shape-r"></div>
+        <div class="main__title">
+            <span>Affiliate Program</span>
+        </div>
+        <div class="aff__content">
+
+            <div class="aff__content--right">
+                Earn with our multi level referral commission program by referring to your friends, relative, colleagues
+                and your networking circles.
+
+                <a href="indexcca3cca3.html?a=signup" class="about__btn--btn"> Signup Now</a>
+
+
+                <div class="affpercent">
+                    <div class="aff__title">
+                        3 LEVEL <span>REFERRAL COMMISSION</span>
+                    </div>
+                    <div class="aff__percent">
+                        <div class="aff__percent--five">
+                            <span>5%</span>
+                            <p>1ST LEVEL</p>
+                        </div>
+                        <div class="aff__percent--one">
+                            <span>15%</span>
+                            <p>2ND LEVEL</p>
+                        </div>
+                        <div class="aff__percent--one">
+                            <span>30%</span>
+                            <p>3RD LEVEL</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="aff__content--left">
+                <img src="{% static 'assets/img/ref.png' %}" alt="Affiliate" class="aff__img">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="footer">
+    <div class="container">
+        
+            <div class="footer__top">
+                <div class="pays__content">
+                    <div class="pays__text">
+                        We Accept <span>Most Popular</span> CryptoCurrency</span> 
+                    </div>
+                    <div class="pays__item">
+                        <img src="{% static 'assets/img/btc.png' %}" alt="Bitcoin">
+                    </div>
+                </div>
+            </div>
+            <div class="f__logo">
+                <img src="{% static 'assets/img/logo.png' %}">
+            </div>
+            <div class="footer__mid">
+                <div class="finfo">
+                    <div class="finfo__icon">
+                        <i class="icon-location3"></i>
+                    </div>
+                    <div class="finfo__title">
+                        <p>1147 E FLORENCE  CA 90001-2466 NIGERIA</p>
+                    </div>
+                </div>
+                <div class="finfo">
+                    <div class="finfo__icon">
+                        <i class="icon-phone2"></i>
+                    </div>
+                    <div class="finfo__title">
+                        <p></p>+8067710016
+                    </div>
+                </div>
+                <div class="finfo">
+                    <div class="finfo__icon">
+                        <i class="icon-mention"></i>
+                    </div>
+                    <div class="finfo__title">
+                        <p></p>support@auztininvestmentlimited.com
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bot">
+                <div class="copyright">
+                    &copy; 2017. <strong>Auztin Investment</strong>. All Rights Reserved.
+                </div>
+                <div class="terms__link">
+                    <a href="indexa972a972.html?a=rules">Terms of Services</a>
+                    <a href="index15a015a0.html?a=support">
+                       
+
+
+</section>
+</div>
+</body>
+
+
+<!-- Wrapper Ends -->
+</body>
+</html>

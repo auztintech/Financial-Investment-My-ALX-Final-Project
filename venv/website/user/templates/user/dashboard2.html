@@ -1,0 +1,430 @@
+{% extends 'dashboard_base2.html' %}
+
+{% load static %}
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+
+                    <!-- Site Content Wrapper -->
+<div class="dt-content-wrapper">
+    <!-- Site Content -->
+    <div class="dt-content">
+        <!-- Page Header -->
+        <div class="dt-page__header">
+            <h1 class="dt-page__title text-capitalize">Dashboard</h1>
+            <div class="dt-entry__header">
+                <!-- Entry Heading -->
+                <div class="dt-entry__heading">
+                </div>
+                <!-- /entry heading -->
+            </div>
+        </div>
+        <!-- /page header -->
+
+        <!-- Grid -->
+        <div class="row mt-3-2m">
+            <!-- Grid Item -->
+            <div class="col-xl-12 col-12 col-md-12">
+                                <!-- Grid Item -->
+                                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container mb-1-5m" style="width: 100%; height: 46px;">
+                    <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://www.tradingview-widget.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22OANDA%3ASPX500USD%22%2C%22title%22%3A%22S%26P%20500%22%7D%2C%7B%22proName%22%3A%22OANDA%3ANAS100USD%22%2C%22title%22%3A%22Nasdaq%20100%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22title%22%3A%22BTC%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3AETHUSD%22%2C%22title%22%3A%22ETH%2FUSD%22%7D%5D%2C%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Afalse%2C%22displayMode%22%3A%22regular%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A46%2C%22utm_source%22%3A%22login.highbittrade.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22login.highbittrade.com%2Fdashboard%22%7D" title="ticker tape TradingView widget" lang="en" style="user-select: none; box-sizing: border-box; display: block; height: 46px; width: 100%;"></iframe>
+                    
+                <style>
+    .tradingview-widget-copyright {
+        font-size: 13px !important;
+        line-height: 32px !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        /* @mixin sf-pro-display-font; */
+        font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
+        color: #9db2bd !important;
+    }
+
+    .tradingview-widget-copyright .blue-text {
+        color: #2962FF !important;
+    }
+
+    .tradingview-widget-copyright a {
+        text-decoration: none !important;
+        color: #9db2bd !important;
+    }
+
+    .tradingview-widget-copyright a:visited {
+        color: #9db2bd !important;
+    }
+
+    .tradingview-widget-copyright a:hover .blue-text {
+        color: #1E53E5 !important;
+    }
+
+    .tradingview-widget-copyright a:active .blue-text {
+        color: #1848CC !important;
+    }
+
+    .tradingview-widget-copyright a:visited .blue-text {
+        color: #2962FF !important;
+    }
+    </style></div>
+                <!-- TradingView Widget END -->
+                            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="dt-card">
+                            <!-- Card Body -->
+                            <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4 dt-card bg-primary text-white">
+                                <span class="badge badge-secondary badge-top-right">Active deposits</span>
+                                <!-- Media -->
+                                <div class="media">
+                                    <i style="font-size: 20px;margin-right: 10px;align-self: center;" class="fa fa-handshake-o" aria-hidden="true"></i>
+                                    <!-- Media Body -->
+                                    <div class="media-body">
+                                        <p class="mb-1 h1 text-white">
+                                            ${{user.balance}}                                      </p>
+                                        <span class="d-block">Withdrawable</span>
+                                    </div>
+                                    <!-- /media body -->
+                                </div>
+                                <!-- /media -->
+                            </div>
+                            <!-- /card body -->
+                        </div>
+                        <!-- /card -->
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="dt-card">
+                            <!-- Card Body -->
+                            <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4 dt-card bg-secondary text-white">
+                                <span class="badge badge-secondary badge-top-right">Earnings</span>
+                                <!-- Media -->
+                                <div class="media">
+                                    <i style="font-size: 20px;margin-right: 10px;align-self: center;" class="fa fa-handshake-o" aria-hidden="true"></i>
+                                    <!-- Media Body -->
+                                    <div class="media-body">
+                                        <p class="mb-1 h1 text-white">
+                                            ${{user.profit}}                                       </p>
+                                        <span class="d-block">Locked</span>
+                                    </div>
+                                    <!-- /media body -->
+                                </div>
+                                <!-- /media -->
+                            </div>
+                            <!-- /card body -->
+                        </div>
+                        <!-- /card -->
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="dt-card">
+                            <!-- Card Body -->
+                            <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4 dt-card bg-primary text-white">
+                                <span class="badge badge-secondary badge-top-right">Referral</span>
+                                <!-- Media -->
+                                <div class="media">
+                                    <i style="font-size: 20px;margin-right: 10px;align-self: center;" class="fa fa-handshake-o" aria-hidden="true"></i>
+                                    <!-- Media Body -->
+                                    <div class="media-body">
+                                        <p class="mb-1 h1 text-white">
+                                            ${{user.bonus}}                                       </p>
+                                        <span class="d-block">Locked</span>
+                                    </div>
+                                    <!-- /media body -->
+                                </div>
+                                <!-- /media -->
+                            </div>
+                            <!-- /card body -->
+                        </div>
+                        <!-- /card -->
+                    </div>
+                
+
+                    <div class="col-md-12">
+
+                        <!-- Card -->
+                        <div class="dt-card dt-card__full-height">
+                            <!-- Card Header -->
+                            <div class="dt-card__header">
+                                <!-- Card Heading -->
+                                <div class="dt-card__heading">
+                                    <h3 class="dt-card__title">Overall portfolio</h3>
+                                </div>
+                                <!-- /card heading -->
+                            </div>
+                            <!-- /card header -->
+                            <!-- Card Body -->
+                            <div class="dt-card__body d-flex justify-content-center align-items-center"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                <!-- Chart -->
+                                <canvas id="pie-chart" class="m--30p display-b chartjs-render-monitor" data-fill="27" height="590" width="590" style="display: block; height: 295px; width: 295px;"></canvas>
+                                <!-- /chart -->
+                            </div>
+                            <!-- /card body -->
+                        </div>
+                        <script src="{% static 'assets2/js/Chart.min.js' %}"></script>
+                        <script>
+                        var activedeposits = 0;
+                        var inactivedeposits = 0;
+                        var withdrawals = 0;
+                        new Chart(document.getElementById("pie-chart"), {
+                            type: 'pie',
+                            data: {
+                                labels: ["Active", "Inactive", "Earnings"],
+                                datasets: [{
+                                    label: "Transactions",
+                                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f"],
+                                    data: [activedeposits, inactivedeposits, withdrawals]
+                                }]
+                            }
+                        });
+                        </script>
+                        <!-- /card -->
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-5 col-sm-6 col-12">
+                <div class="row">
+                    <div class="col-md-12">
+                                                <div class="card bg-gradient-blue text-white">
+                            <!-- Card Body -->
+                            <div class="card-body p-6">
+                                <p class="display-4 mb-1">KYC Verification</p>
+                                <p class="f-14">
+                                Please verify your account                                </p>
+                                <a class="btn btn-default btn-sm text-dark" href="{% url 'user:kyc_apply' %}">Verify</a>
+                                                                </div>
+                            <!-- /card body -->
+                        </div>
+                                                                        
+                        
+                        <div class="dt-card dt-card bg-image-v6 bg-overlay overlay-opacity-0_8 bg-gradient-blue--after text-white">
+
+                            <!-- Overlay Content -->
+                            <div class="bg-overlay__inner mt-auto">
+
+                                <!-- Card Body -->
+                                <div class="dt-card__body">
+
+                                    <h3 class="text-white mb-2">Company Account:</h3>
+
+                                  
+                                    <div class="copy-container">
+                                      <input type="text" value="{{company_account.account_number}}" id="text-to-copy" readonly style="
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+  ">
+                                        <button id="copy-button" class="btn btn-info btn-block">Copy</button>
+                                        </div>
+                                        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var copyButton = document.getElementById('copy-button');
+  var textToCopy = document.getElementById('text-to-copy');
+
+  copyButton.addEventListener('click', function () {
+    // Select the text inside the input field
+    textToCopy.select();
+    textToCopy.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text to the clipboard
+    document.execCommand('copy');
+
+    // Deselect the text
+    textToCopy.setSelectionRange(0, 0);
+
+    // Change the button text to indicate it's been copied
+    copyButton.textContent = 'Copied!';
+  });
+});
+</script>
+
+                                        
+                                </div>
+                                <!-- /card body -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                            <!-- /overlay content -->
+
+                        </div>
+                        <!-- /card -->
+                    </div>
+
+
+
+                    <div class="col-md-12">
+                        <div class="dt-card">
+
+                            <!-- Card Header -->
+                            <div class="dt-card__header mb-4">
+
+                                <!-- Card Heading -->
+                                <div class="dt-card__heading">
+                                    <h3 class="dt-card__title text-capitalize">Earnings history</h3>
+                                </div>
+                                <!-- /card heading -->
+
+                                <!-- Card Tools -->
+                                <div class="dt-card__tools">
+                                    <a href="earning.html" class="dt-card__more">Detailed history</a>
+                                </div>
+                                <!-- /card tools -->
+
+                            </div>
+                            <!-- /card header -->
+                            
+
+                            <!-- Card Body -->
+                            <div class="dt-card__body pb-5">
+
+                                <!-- Tables -->
+                                <div class="table-responsive ps-custom-scrollbar ps">
+                                    <table class="table table-ordered table-bordered-0 mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-uppercase">TXN Code</th>
+                                                <th class="text-uppercase text-right" scope="col">Amount (BRL)
+                                                </th>
+                                                <th class="text-uppercase text-center" scope="col">Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                                                    </tbody>
+                                    </table>
+                                <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+                                <!-- /tables -->
+
+                            </div>
+
+                            <!-- /card body -->
+
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <!-- /grid item -->
+
+        </div>
+        <!-- /grid -->
+    </div>
+    <!-- /site content -->
+    <script src="{% static 'assets2/js/functions.js' %}"></script><!-- Footer -->
+<footer class="dt-footer">
+
+    Copyright High Bit Trade © 2023</footer>
+<!-- /footer -->
+</div>
+<!-- /site content wrapper -->
+</main>
+</div>
+</div>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

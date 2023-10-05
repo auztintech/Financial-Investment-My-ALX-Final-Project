@@ -1,0 +1,463 @@
+{% extends 'dashboard_base2.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block content %}
+
+                   <!-- Site Content Wrapper -->
+<div class="dt-content-wrapper">
+    <div class="hide" id="active-tab" data-id="#tab-pane1" ></div>
+    <!-- Site Content -->
+    <div class="dt-content">
+        <!-- Profile -->
+        <div class="profile">
+
+            <!-- Profile Banner -->
+            <div class="profile__banner">
+
+                <!-- Profile Banner Top -->
+                <div class="profile__banner-detail">
+                    <!-- Avatar Wrapper -->
+                    <div class="dt-avatar-wrapper">
+                        <!-- Avatar -->
+                        <img class="dt-avatar dt-avatar__shadow size-90 mr-sm-4"
+                        src="{{user_profile.profile_picture.url}}" id="ppic" alt="Logo">
+                        <!-- /avatar -->
+
+                        <!-- Info -->
+                        <div class="dt-avatar-info">
+                            <span
+                                class="dt-avatar-name display-4 mb-2 font-weight-light">{{user.username}}</span>
+                            <span class="f-16">{{user.email}}</span>
+                            <h3><a href="{% url 'user:profile_picture_upload' %}">upload image</a></h3>
+                            <div class="dropdown mt-2">
+
+                                                         </div>
+                        </div>
+                        <!-- /info -->
+                    </div>
+                    <!-- /avatar wrapper -->
+
+                    <div class="ml-sm-auto">
+                        <!-- List -->
+                        <div class="col-sm-12">
+                                                        <!--
+                            <div class="d-flex align-items-baseline mb-1">
+                                <span
+                                    class="display-2 font-weight-500 text-light mr-2"></span>
+                            </div>
+                            <p class="mb-0">Overall balance</p>
+                            -->
+                                                    </div>
+                        <!-- /list -->
+                    </div>
+                </div>
+                <!-- /profile banner top -->
+
+            </div>
+            <!-- /profile banner -->
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+
+                <!-- Grid -->
+                <div class="row">
+
+                    <!-- Grid Item -->
+                    <div class="col-xl-12 order-xl-1">
+
+                        <!-- Card -->
+                        <div class="card">
+
+                            <!-- Card Header -->
+                            <div
+                                class="card-header card-nav bg-transparent border-bottom d-sm-flex justify-content-sm-between">
+                                <h3 class="mb-2 mb-sm-n5">Payment Account Settings</h3>
+
+                                <ul class="card-header-links nav nav-underline" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="{% url 'user:profile' %}">My Profile</a>
+                                    </li>
+                                                                        <li class="nav-item">
+                                        <a class="nav-link " href="{% url 'user:profile_2' %}">Payment Account</a>
+                                    </li>
+                                                                        <li class="nav-item">
+                                        <a class="nav-link " href="{% url 'account_change_password' %}">Security</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- /card header -->
+
+                            <!-- Card Body -->
+                            <div class="card-body pb-2">
+
+
+{% include "message.html" %}
+
+
+
+
+<form  method="post">
+
+{% csrf_token %}
+
+                                <!-- Tab Content-->
+                                <div class="tab-content">
+
+                                    <!-- Tab panel -->
+                                    <div id="tab-pane1" class="tab-pane active">
+                                        <!-- Grid -->
+                                        <div class="row">
+                                            <!-- Grid Item -->
+                                            <div class="col-xl-12">
+                                                                                                                                                
+                                                <!-- Form -->
+                                                                             
+                                                    <!-- Row -->
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+
+                                                            
+                                                        
+
+                                                            <!-- Row -->
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    
+                                                                    <!-- Form Group -->
+                                                                    <div class="form-group">
+                                                                        
+                                                                        {{form|crispy}}
+                                                                    </div>
+                                                                    <!-- /form group -->
+                                                                </div>
+                                                               
+                                                              
+                                                                <div class="col-md-12">
+                                                                    <!-- Form Group -->
+                                                                    <div class="form-group mb-10">
+                                                                        <button type="submit" class="btn btn-info text-uppercase w-100"
+                                                                            data-toggle="modal" >Save</button>
+                                                                    </div>
+                                                                    <!-- /form group -->
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                            <!-- /row -->
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                                                                                        <!-- Row -->
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <!-- Form Group -->
+                                                                    <div class="form-group">
+                                                                        <label for="ref">Referral Code</label>
+                                                                        <p class="display-4">{{link}}                                                                            <p>
+                                                                    </div>
+                                                                    <!-- /form group -->
+                                                                </div>
+                                                            </div>
+                                                            <!-- /row -->
+                                                                                                                    </div>
+                                                    </div>
+                                                    <div class="dt-card__body">
+                                                        <!-- Modal -->
+                                                        <div class="modal fade display-n" id="form-modal" tabindex="-1" role="dialog"
+                                                            aria-labelledby="model-8" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered" role="document">
+
+                                                                <!-- Modal Content -->
+                                                                <div class="modal-content">
+
+                                                                    <!-- Modal Header -->
+                                                                    <div class="modal-header">
+                                                                        <h3 class="modal-title" id="model-8">Enter password to proceed</h3>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <!-- /modal header -->
+
+                                                                    <!-- Modal Body -->
+                                                                    <div class="modal-body">
+                                                                        <form>
+                                                                            <div class="form-group">
+                                                                                <input class="form-control " name="password"
+                                                                                    id="password" type="password">
+                                                                                <label class="error" for="fname"></label>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <!-- /modal body -->
+
+                                                                    <!-- Modal Footer -->
+                                                                    <div class="modal-footer">
+                                                                        <button type="button"
+                                                                            class="btn btn-secondary btn-sm"
+                                                                            data-dismiss="modal">Cancel                                                                        </button>
+                                                                        <button type="submit"
+                                                                            class="btn btn-primary btn-sm">Save                                                                        </button>
+                                                                    </div>
+                                                                    <!-- /modal footer -->
+
+                                                                </div>
+                                                                <!-- /modal content -->
+
+                                                            </div>
+                                                        </div>
+                                                        <!-- /modal -->
+                                                    </div>
+                                                </form>                                                <!-- /form -->
+                                            </div>
+                                            <!-- /grid item -->
+                                        </div>
+                                        <!-- /grid -->
+                                    </div>
+                                    <!-- /tab panel -->
+                                                                        <!-- Tab panel -->
+                                    <div id="tab-pane" class="tab-pane ">
+                                        <!-- Grid -->
+                                        <div class="row">
+                                            <!-- Grid Item -->
+                                            <div class="col-xl-6">
+                                                                                                <!-- Form -->
+                                                <form action="" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_test_name" value="93051b43f730ddd324770fd6661b4b82" />           
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <!-- Form Group -->
+                                                                    <div class="form-group">
+                                                                        <label for="paymentType">Type</label>
+                                                                        <select class="form-control" name="paymentType" id="simple-select">
+                                                                            <option value="" selected disabled hidden>Choose Here</option>
+                                                                                                                                                            <option value="BTC" selected>BTC</option>
+                                                                                                                                                    </select>
+                                                                        <label class="error" for="paymentType"></label>
+                                                                    </div>
+                                                                    <!-- /form group -->
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <!-- Form Group -->
+                                                                    <div class="form-group">
+                                                                        <label for="bitcoinAd">Account</label>
+                                                                        <input type="text"
+                                                                            value="wallet"
+                                                                            class="form-control" name="paymentAccount"
+                                                                            aria-describedby="bitcoinAd"
+                                                                            placeholder="Payment Account">
+                                                                        <label class="error" for="paymentAccount"></label>
+                                                                    </div>
+                                                                    <!-- /form group -->
+                                                                </div>
+                                                            </div>
+                                                            <!-- /row -->
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Form Group -->
+                                                    <div class="form-group mb-0">
+                                                        <button type="button" class="btn btn-primary text-uppercase"
+                                                            data-toggle="modal" data-target="#form1-modal">Save</button>
+                                                    </div>
+                                                    <!-- /form group -->
+                                                    <div class="dt-card__body">
+
+                                                        <!-- Modal -->
+                                                        <div class="modal fade display-n" id="form1-modal" tabindex="-1"
+                                                            role="dialog" aria-labelledby="model-8" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered"
+                                                                role="document">
+
+                                                                <!-- Modal Content -->
+                                                                <div class="modal-content">
+
+                                                                    <!-- Modal Header -->
+                                                                    <div class="modal-header">
+                                                                        <h3 class="modal-title" id="model-8">Enter password to proceed</h3>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <!-- /modal header -->
+
+                                                                    <!-- Modal Body -->
+                                                                    <div class="modal-body">
+                                                                        <form>
+                                                                            <div class="form-group">
+                                                                            <input class="form-control " name="password"
+                                                                                    id="password" type="password">
+                                                                                <label class="error" for="fname"></label>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <!-- /modal body -->
+
+                                                                    <!-- Modal Footer -->
+                                                                    <div class="modal-footer">
+                                                                        <button type="button"
+                                                                            class="btn btn-secondary btn-sm"
+                                                                            data-dismiss="modal">Cancel                                                                        </button>
+                                                                        <button type="submit"
+                                                                            class="btn btn-primary btn-sm">Save                                                                        </button>
+                                                                    </div>
+                                                                    <!-- /modal footer -->
+                                                                </div>
+                                                                <!-- /modal content -->
+                                                            </div>
+                                                        </div>
+                                                        <!-- /modal -->
+                                                    </div>
+                                                </form>                                                <!-- /form -->
+
+                                            </div>
+                                            <!-- /grid item -->
+
+                                        </div>
+                                        <!-- /grid -->
+
+                                    </div>
+                                    <!-- /tab panel -->
+                                    
+                                    <!-- Tab panel -->
+                                    <div id="tab-pane2" class="tab-pane ">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                                                            </div>
+                                            <!-- Grid Item -->
+                                            <div class="col-xl-6">
+                                                <!-- Form -->
+                                                <form action="" id="resetForm" method="post" accept-charset="utf-8">
+                                                                                        <input type="hidden" name="csrf_test_name" value="93051b43f730ddd324770fd6661b4b82" />
+                                                <!-- Form Group -->
+                                                <div class="form-group">
+                                                    <label for="currentpass">Current password</label>
+                                                    <input class="form-control " name="oldPassword" type="password">
+                                                    <label class="error" for="fname"></label>
+                                                </div>
+                                                <!-- /form group -->
+                                                <!-- Form Group -->
+                                                <div class="form-group">
+                                                    <label for="newpass">New password</label>
+                                                    <input class="form-control " name="newPassword" type="password">
+                                                    <label class="error" for="fname"></label>
+                                                </div>
+                                                <!-- /form group -->
+                                                <!-- Form Group -->
+                                                <div class="form-group">
+                                                    <label for="cpass">Confirm Password</label>
+                                                    <input class="form-control " name="cNewPassword" type="password">
+                                                    <label class="error" for="fname"></label>
+                                                </div>
+                                                <!-- /form group -->
+                                                <button type="submit" class="btn btn-primary text-uppercase">Change password</button>
+                                                </form>                                                <!-- /form -->
+                                            </div>
+                                            <!-- /grid item -->
+                                                                                        <!-- /grid item -->
+                                        </div>
+                                        <!-- /grid -->
+                                    </div>
+                                    <!-- /tab panel -->
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="authenticate-modal" tabindex="-1"
+                                        role="dialog" aria-labelledby="model-8" aria-hidden="true">
+                                        <form action="" id="google2FAForm" method="post" accept-charset="utf-8">
+                                                                                                                <inpu
+{% endblock content %}
+
+<!-- /Verify Modal -->        <div class="main-panel bg-dark">
+            <div class="content bg-dark">
+                <div class="page-inner">
+
+
+
+
+<script language=javascript>
+function IsNumeric(sText) {
+  var ValidChars = "0123456789.";
+  var IsNumber=true;
+  var Char;
+  if (sText == '') return false;
+  for (i = 0; i < sText.length && IsNumber == true; i++) { 
+    Char = sText.charAt(i); 
+    if (ValidChars.indexOf(Char) == -1) {
+      IsNumber = false;
+    }
+  }
+  return IsNumber;
+}
+
+function checkform() {
+  if (document.editform.fullname.value == '') {
+    alert("Please type your full name!");
+    document.editform.fullname.focus();
+    return false;
+  }
+
+
+  if (document.editform.password.value != document.editform.password2.value) {
+    alert("Please check your password!");
+    document.editform.fullname.focus();
+    return false;
+  }
+
+
+
+
+  if (document.editform.email.value == '') {
+    alert("Please enter your e-mail address!");
+    document.editform.email.focus();
+    return false;
+  }
+
+
+  return true;
+}
+</script>
+
+
+<h1>Your account:</h1><br><br>
+<form  method=post onsubmit="return checkform()" name=editform><input type="hidden" name="form_id" value="16941717157636"><input type="hidden" name="form_token" value="4395bed3be7663bee9f27a0ec2d22187">
+<input type=hidden name=a value=edit_account>
+<input type=hidden name=action value=edit_account>
+<table cellspacing=0 cellpadding=2 border=0  class="table table-hover">
+<tr>
+ <td>Account Name:</td>
+ <td>{{user.username}}</td>
+</tr>
+<tr>
+ <td>First Name:</td>
+ <td>{{user.first_name}}</td>
+</tr>
+<tr>
+ <td>Last Name:</td>
+ <td>{{user.last_name}}</td>
+</tr>
+<tr>
+ <td>Registration date:</td>
+ <td>{{user.date_joined}}</td>
+</tr>
+
+
+
+ 
+
+{% csrf_token %}
+{{form|crispy}}
+<tr>
+ <td>&nbsp;</td>
+ <td><input type=submit value="Change Account data" class="btn btn-primary btn-block border-0"></td>
+</tr></table>
+</form>
+
+  </div>
+                <!-- end of chart -->

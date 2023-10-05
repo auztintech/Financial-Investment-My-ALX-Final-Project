@@ -1,0 +1,75 @@
+{% load static %}
+<footer class="footer bg-dark text-light">
+                    <div class="container-fluid">
+                        <div class="row copyright text-center text-align-center">
+                            <p>All Rights Reserved &copy; FxSuperTrade 2021</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--   Core JS Files   -->
+	<script src="{% static 'assets5/js/jquery.3.2.1.min.js' %} "></script>
+	<script src="{% static 'assets5/js/popper.min.js' %}"></script>
+	<script src="{% static 'assets5/js/bootstrap.min.js' %} "></script>
+	<script src="{% static 'assets5/js/customs.js' %}"></script>
+	
+	
+	<!-- jQuery UI -->
+	<script src="{% static 'assets5/js/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'assets5/js/jquery.ui.touch-punch.min.js' %}"></script>
+
+	<!-- jQuery Scrollbar -->
+	<script src="{% static 'assets5/js/jquery.scrollbar.min.js' %}"></script>
+
+	<!-- jQuery Sparkline -->
+	<script src="{% static 'assets5/js/jquery.sparkline.min.js' %}"></script>
+
+	<!-- Sweet Alert -->
+	<script src="{% static 'assets5/js/sweetalert.min.js' %} "></script>
+	<!-- Bootstrap Notify -->
+	<script src="{% static 'assets5/js/bootstrap-notify.min.js' %} "></script>
+	
+
+	<!-- Atlantis JS -->
+	<script src="{% static 'assets5/js/atlantis.min.js' %}"></script>
+	<script src="{% static 'assets5/js/atlantis.js' %}"></script>
+	<script type="text/javascript">
+		var badWords = [ 
+			'<!--Start of Tawk.to Script-->',
+			'<script type="text/javascript">', 
+			'<!--End of Tawk.to Script-->'
+					];
+		$(':input').on('blur', function(){
+			var value = $(this).val();
+			$.each(badWords, function(idx, word){
+			value = value.replace(word, '');
+			});
+			$(this).val( value);
+		});
+	</script>
+	 <script>
+		$(document).ready( function () {
+			$('#ShipTable').DataTable({
+				order: [ [0, 'desc'] ]
+			});
+			$(".dataTables_length select").addClass("bg-dark text-light");
+			$(".dataTables_filter input").addClass("bg-dark text-light");
+		} );
+	</script>
+	<script>
+		$(document).ready( function () {
+			$('.UserTable').DataTable({
+				order: [ [0, 'desc'] ]
+			});
+			$(".dataTables_length select").addClass("bg-dark text-light");
+			$(".dataTables_filter input").addClass("bg-dark text-light");
+		} );
+	</script>
+	
+	 
+</body>
+</html>
+

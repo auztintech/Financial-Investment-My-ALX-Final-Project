@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+      
+   
+    <!-- profit calculator section start -->
+    <section class="pt-120 pb-120">
+      <div class="container">
+        <h2 class="">Request for Withdrawal</h2>
+        <br>
+        <br>
+        <br>
+        <div class="row justify-content-ce">
+          <div class="col-lg-6">
+            <div class="section-header text-ce">
+              <h3 class="section-title"><span class="font-weight-normal">Minimum amount</span> <b class="base--color">$10</h3>
+              <h3 class="section-title"><span class="font-weight-normal">Maximum amount</span> <b class="base--color">${{user.balance}}</h3>
+
+              <h3 class="section-title"><span class="font-weight-normal">Charge Type</span> <b class="base--color">Percentage</h3>
+
+              <h3 class="section-title"><span class="font-weight-normal">Charge Amount</span> <b class="base--color">0%</h3>
+              <p>Please make sure your wallet address is updated  </p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-xl-8">
+            <div>
+
+
+
+
+
+                  <button type="submit" class="cmn-btn center"> <a href="{% url 'wallet:ask_for_withdraw' %}">Request Withdrawal</a></button> 
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- profit calculator section end -->
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- dashboard section end -->
+
+
+
+
+{% endblock content %}
+
+
+

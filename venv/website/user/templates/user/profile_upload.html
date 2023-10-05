@@ -1,0 +1,125 @@
+{% extends 'dashboard_base2.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block content %}
+
+                   <!-- Site Content Wrapper -->
+<div class="dt-content-wrapper">
+    <div class="hide" id="active-tab" data-id="#tab-pane1" ></div>
+    <!-- Site Content -->
+    <div class="dt-content">
+        <!-- Profile -->
+        <div class="profile">
+
+            <!-- Profile Banner -->
+            <div class="profile__banner">
+
+                <!-- Profile Banner Top -->
+                <div class="profile__banner-detail">
+                    <!-- Avatar Wrapper -->
+                    <div class="dt-avatar-wrapper">
+                        <!-- Avatar -->
+                        <img class="dt-avatar dt-avatar__shadow size-90 mr-sm-4"
+                            src="{{user_profile.profile_picture.url}}" id="ppic" alt="Logo">
+                        <!-- /avatar -->
+
+                        <!-- Info -->
+                        <div class="dt-avatar-info">
+                            <span
+                                class="dt-avatar-name display-4 mb-2 font-weight-light">{{user.username}}</span>
+                            <span class="f-16">{{user.email}}</span>
+                            <div class="dropdown mt-2">
+
+                                <!-- Profile Pic Uploader -->
+                                <form  id="upload_form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_test_name" value="93051b43f730ddd324770fd6661b4b82" />                                                                                                                           
+                                    <div class="upload-btn-wrapper">
+                                    <button class="dropdown-toggle no-arrow text-white bg-transparent border-n">
+                                        <i class="fa fa-cog fa-spin" style="font-size: 20px;margin-right: 10px;"></i>
+                                        <span class="d-sm-inline-block">Change profile pic</span>
+                                    </button>
+                                    <input type="file" name="profile-pic" id="imgInp"/>
+                                    </div>
+                                    <button id="ppic-save" type="submit" class="btn btn-info display-n bg-transparent border-n">
+                                        <i class="icon icon-circle-add-o icon-xl mr-2"></i>
+                                        <span class="d-sm-inline-block">Save</span>
+                                    </button>
+                                </form>   
+
+
+
+
+
+
+
+                                                         </div>
+                        </div>
+                        <!-- /info -->
+                    </div>
+                    <!-- /avatar wrapper -->
+
+                    <div class="ml-sm-auto">
+                        <!-- List -->
+                        <div class="col-sm-12">
+                                                        <!--
+                            <div class="d-flex align-items-baseline mb-1">
+                                <span
+                                    class="display-2 font-weight-500 text-light mr-2"></span>
+                            </div>
+                            <p class="mb-0">Overall balance</p>
+                            -->
+                                                    </div>
+                        <!-- /list -->
+                    </div>
+                </div>
+                <!-- /profile banner top -->
+
+            </div>
+            <!-- /profile banner -->
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+
+                <!-- Grid -->
+                <div class="row">
+
+                    <!-- Grid Item -->
+                    <div class="col-xl-12 order-xl-1">
+
+                        <!-- Card -->
+                        <div class="card">
+
+                            <!-- Card Header -->
+                            <div
+                                class="card-header card-nav bg-transparent border-bottom d-sm-flex justify-content-sm-between">
+                                <h3 class="mb-2 mb-sm-n5">Account Details</h3>
+
+                                <ul class="card-header-links nav nav-underline" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="{% url 'user:profile_2' %}">My Profile</a>
+                                    </li>
+                                                                        <li class="nav-item">
+                                        <a class="nav-link " href="{% url 'user:profile_2' %}">Payment Account</a>
+                                    </li>
+                                                                        <li class="nav-item">
+                                        <a class="nav-link " href="{% url 'account_change_password' %}">Security</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- /card header -->
+
+
+
+
+
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit">Save</button>
+                            </form>
+{% endblock content %}

@@ -1,0 +1,373 @@
+{% load static %}
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="High Bit Trade is an investment company that aggregates funds for investment in bitcoin and forex trading.                                                                                                                                                                                                                                                                                                                                                                                                          ">
+    <meta name="keywords" content="High Bit Trade, bitcoin trading, forex, investment, trading                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                          ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <base href="https://login.highbittrade.com/"> -->
+    <title>{% block title %}{% if page_title %}{{ page_title }}-{% endif %}{{ site_name }}-{{tagline}}{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    
+    <link rel="shortcut icon" href="{% static 'assets2/uploads/favicon1.png' %}">
+    
+    <!-- Font Icon Styles -->
+    <link rel="stylesheet" href="{% static 'assets2/css/icons.css' %}">
+
+    <!-- Font Awesome core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+
+    <!-- /font icon Styles -->
+    <!-- Load Styles -->
+    <link rel="stylesheet" href="{% static 'assets2/css/bootstrap-formhelpers.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets2/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets2/css/chartist.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets2/css/style.min.css' %}">
+    <!-- /load styles -->
+    <!-- include summernote css/js -->
+    <link href="{% static 'assets2/css/summernote-bs4.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets2/css/intlTelInput.css' %}">
+
+    <script src="{% static 'assets2/js/jquery.min.js' %}"></script>
+    <style type="text/css">/* Chart.js' %} */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
+    <body class="dt-header--fixed theme-dark dt-layout--full-width o-auto dt-sidebar--fixed"><style></style>
+        <!-- Root -->
+        <div class="dt-root op-1">
+            <div class="dt-root__inner">
+                                <!-- Header -->
+                <header class="dt-header">
+                    <!-- Header container -->
+                    <div class="dt-header__container">
+                        <!-- Brand -->
+                        <div class="dt-brand">
+                            <!-- Brand tool -->
+                            <div class="dt-brand__tool" data-toggle="main-sidebar">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                            <!-- /brand tool -->
+
+                            <!-- Brand logo -->
+                            <span class="dt-brand__logo">
+                                <a class="dt-brand__logo-link" href="">
+                                <img class="d-none d-sm-inline-block w-100" src="{% static 'assets2/uploads/StockPl1.png' %}" alt="logo">
+                                <img class="dt-brand__logo-symbol d-sm-none" src="{% static 'assets2/uploads/StockPl1.png' %}" alt="logo">
+                                </a>
+                            </span>
+                            <!-- /brand logo -->
+
+                        </div>
+                        <!-- /brand -->
+
+                        <!-- Header toolbar-->
+                        <div class="dt-header__toolbar">
+                        
+
+                            <div class="search-box d-none d-lg-block">
+                                                            <h1 class="dt-page__title mt-4" style="margin-left: -1.5em;">Home <i style="font-size: 14px;" class="fa fa-chevron-right"></i> Create Ticket</h1>
+                                                        </div>
+
+                            <!-- Header Menu Wrapper -->
+                            <div class="dt-nav-wrapper">
+                                <!-- Header Menu -->
+                                <ul class="dt-nav d-lg-none">
+                                    <li class="dt-nav__item dt-notification-search dropdown">
+
+                                        <!-- Dropdown Link -->
+                                        <a href="#" class="dt-nav__link dropdown-toggle no-arrow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i style="font-size: 14px;"  class="fa fa-search"></i> </a>
+                                        <!-- /dropdown link -->
+
+                                        <!-- Dropdown Option -->
+                                        <div class="dropdown-menu">
+
+                                            <!-- Search Box -->
+                                            <form class="search-box right-side-icon">
+                                                <input class="form-control form-control-lg" type="search" placeholder="Search in app...">
+                                                <button type="submit" class="search-icon"><i style="font-size: 14px;" class="fa fa-search"></i></button>
+                                            </form>
+                                            <!-- /search box -->
+
+                                        </div>
+                                        <!-- /dropdown option -->
+
+                                    </li>
+                                </ul>
+                                <!-- /header menu -->
+                                <!-- Header Menu -->
+                                <ul class="dt-nav">
+                                    <li class="dt-nav__item dropdown">
+      
+                                        <!-- Dropdown Link -->
+                                        <a href="#" class="dt-nav__link" id="currentLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img class="flag-icon flag-icon-rounded flag-icon-lg mr-1m" src="{% static 'assets2/uploads/gb-eng.png' %}">
+                                        <span>EN</span> <i style="font-size: 14px;margin-left:7px;" class="fa fa-chevron-down"></i> </a>
+                                        <!-- /dropdown link -->
+
+                                        <!-- Dropdown Option -->
+                                        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(8px, 72px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/gb-eng.png' %}"><span>English</span> </button>
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/russia.png' %}"><span>Russian</span> </button>
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/portuguese.png' %}"><span>Português</span> </button>
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/spain.png' %}"><span>Español</span> </button>
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/germany.png' %}"><span>German</span> </button>
+                                                                                    </div>
+                                        <!-- /dropdown option -->
+
+                                    </li>
+                                </ul>
+                                <!-- /header menu -->
+
+                                <!-- Header Menu -->
+                                <ul class="dt-nav">
+                                    <li class="dt-nav__item dropdown">
+
+                                        <!-- Dropdown Link -->
+                                        <a href="#" class="dt-nav__link dropdown-toggle no-arrow dt-avatar-wrapper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img class="dt-avatar size-30" src="{{user_profile.profile_picture.url}}" alt="First Lastie">
+                                            <span class="dt-avatar-info d-none d-sm-block">
+                                                <span class="dt-avatar-name">{{user.username}}</span>
+                                                 <span>Verify Your Account</span>
+                                                                                                </span> </a>
+                                        <!-- /dropdown link -->
+
+
+                                        <!-- Dropdown Option -->
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="{% url 'user:profile' %}"> <i style="font-size: 12px;margin-right: 10px;" class="fa fa-user"></i>Account                                            </a>
+                                            <a class="dropdown-item" href="login.html"> <i style="font-size: 12px;margin-right: 10px;" class="fa fa-pencil"></i>Logout                                            </a>
+                                        </div>
+                                        <!-- /dropdown option -->
+
+                                    </li>
+                                </ul>
+                                <!-- /header menu -->
+                            </div>
+                            <!-- Header Menu Wrapper -->
+
+                        </div>
+                        <!-- /header toolbar -->
+
+                    </div>
+                    <!-- /header container -->
+
+                </header>
+                <!-- /header -->
+
+                <!-- Site Main -->
+                <main class="dt-main">
+                    <!-- Sidebar -->
+                    <aside id="main-sidebar" class="dt-sidebar ps ps--active-y">
+                                                    <app-task-sidebar class="ng-tns-c266-22 dt-module__sidebar active" style="max-width: none;border-right: none;">
+                                <div class="dt-module__sidebar-header ng-tns-c266-22">
+                                    <div class="quick-menu-list ng-tns-c266-22">
+                                        <!---->
+                                        <form novalidate="" class="search-box d-md-none ng-tns-c266-22 ng-untouched ng-pristine ng-valid ng-star-inserted">
+                                            <input type="search" id="address" name="address" placeholder="Search in app..." class="form-control ng-tns-c266-22">
+                                            <button type="submit" class="search-icon ng-tns-c266-22">
+                                                <gx-icon name="search" size="lg" class="ng-tns-c266-22 icon icon-search icon-lg"></gx-icon>
+                                            </button>
+                                        </form>
+                                        <!---->
+                                        <a href="{% url 'user:dashboard' %}" class="text-dark ng-star-inserted">
+                                            <i class="fa fa-arrow-left" style="font-size: 14px;margin-right: 10px;"></i>
+                                            <span class="display-6 align-middle ml-1">Main dashboard</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div _ngcontent-ovt-c266="" perfectscrollbar="" class="dt-module__sidebar-content position-relative ng-tns-c266-22 ng-trigger ng-trigger-collapseAppSidebar ps ps--active-y" style="display: block; opacity: 1;">
+                                    <div _ngcontent-ovt-c266="" class="dt-module__sidebar-content-inner pt-md-7 ng-tns-c266-22">
+                                        <ul _ngcontent-ovt-c266="" class="dt-module-side-nav ng-tns-c266-22">
+                                            <li _ngcontent-ovt-c266="" class="dt-module-side-nav__header ng-tns-c266-22">
+                                                <span _ngcontent-ovt-c266="" class="dt-module-side-nav__text ng-tns-c266-22">tickets</span>
+                                                                                            </li>
+                                            <li class="dt-module-side-nav__item ng-tns-c266-22">
+                                                <a class="dt-module-side-nav__link ng-tns-c266-22" id="newTicket" href="javascript:void(0);" style="width: 100%;">
+                                                    <i class="fa fa-pencil-square-o"></i>
+                                                    <span class="dt-module-side-nav__text ng-tns-c266-22">Create ticket</span>
+                                                </a>
+                                            </li>
+                                            <li class="dt-module-side-nav__item ng-tns-c266-22 active">
+                                                <a class="dt-module-side-nav__link ng-tns-c266-22" href="" style="width: 100%;">
+                                                    <i class="fa fa-book"></i>
+                                                    <span class="dt-module-side-nav__text ng-tns-c266-22">All tickets</span>
+                                                </a>
+                                            </li>
+                                            <li class="dt-module-side-nav__item ng-tns-c266-22 ">
+                                                <a class="dt-module-side-nav__link ng-tns-c266-22" href="">
+                                                    <i class="fa fa-envelope-o"></i>
+                                                    <span class="dt-module-side-nav__text ng-tns-c266-22">Pending tickets</span>
+                                                </a>
+                                            </li>
+                                            <li class="dt-module-side-nav__item ng-tns-c266-22 ">
+                                                <a class="dt-module-side-nav__link ng-tns-c266-22" href="">
+                                                    <i class="fa fa-check-square-o"></i>
+                                                    <span class="dt-module-side-nav__text ng-tns-c266-22">Resolved tickets</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </app-task-sidebar>
+                                                </aside>
+                    <!-- /sidebar -->
+                    <div class="dt-content-wrapper">
+    <!-- Site Content -->
+    <div class="dt-content">
+        <!-- Profile -->
+        <div class="profile">
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <!-- Grid -->
+                <div class="row">
+                    <!-- Grid Item -->
+                    <div class="col-xl-12 col-12 order-xl-1">
+                        <!-- Card -->
+                        <div class="dt-card">
+                            <!-- Card Body -->
+                            <div class="dt-module__content-inner">
+                                <div class="border-bottom border-w-2 mb-1 mt-n1 pb-4 px-1">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="mt-2 mr-4 dropdown">
+                                            <checkbox class="mr-3 dt-checkbox dt-checkbox-icon dt-checkbox-only">
+                                                <input type="checkbox" id="gx-checkbox-181" class="ng-valid ng-dirty ng-touched">
+                                                <label class="font-weight-light dt-checkbox-content" for="gx-checkbox-181">
+                                                    <span class="unchecked">
+                                                        <i class="fa fa-square-o"></i>
+                                                    </span><!---->
+                                                    <span class="checked ng-star-inserted">
+                                                        <i class="fa fa-check-square"></i>
+                                                    </span><!---->
+                                                </label>
+                                            </checkbox>
+                                            <a aria-haspopup="true" href="javascript:void(0)" id="action-select" class="text-dark" aria-expanded="false"> None </a>
+                                        </div>
+                                        
+                                        <div placement="bottom-right" class="mr-auto dropdown">
+                                                                                </div><!---->
+                                        
+                                    <div role="group" class="btn-group btn-group-sm mr-4 mr-lg-7 mb-1 ng-star-inserted">
+                                                                                
+                                        <div x-placement="bottom-right" data-url="" class="dropdown-menu bulk-priority" style="">
+                                            <a href="javascript:void(0)" data-id="high" class="prioritise-table dropdown-item ng-star-inserted">High priority</a>
+                                            <a href="javascript:void(0)" data-id="medium" class="prioritise-table dropdown-item ng-star-inserted">Medium priority</a>
+                                            <a href="javascript:void(0)" data-id="low" class="prioritise-table dropdown-item ng-star-inserted">Low priority</a>
+                                        </div>
+                                    </div><!---->
+                                    <div placement="bottom-right" class="dropdown">
+                                        <a aria-haspopup="true" id="bulk-action" href="javascript:void(0)" class="dropdown-toggle btn btn-outline-dark btn-sm" aria-expanded="false"> Status </a>
+                                        <div class="bulk-action dropdown-menu" data-url="">
+                                            <a href="javascript:void(0)" data-id="0" class="resolve-table dropdown-item">Mark as pending</a>
+                                            <a href="javascript:void(0)" data-id="1" class="resolve-table dropdown-item">Mark as resolved</a>
+                                        </div>
+                                    </div><!---->
+                                </div>
+                            </div>
+                            <!-- Tables -->
+                            <div class="dt-module__content position-relative ps ps--active-y">
+                                <div class=""><!---->
+                                    <div id="hpdk" data-url="" class="dt-module__list ng-star-inserted"><!---->
+                                                                            </div>
+                                </div>
+                                <!-- /card body -->
+                            </div>
+                            <!-- /card -->
+                        </div>
+                        <!-- /grid item -->
+
+                    </div>
+                    <!-- /grid -->
+                    <div style="float:right">
+                                            </div>
+
+                </div>
+                <!-- /profile content -->
+
+            </div>
+            <!-- /Profile -->
+            <aside class="dt-customizer dt-drawer w-65 position-right" style="width: 55em;">
+            <div class="dt-customizer__inner">
+                <!-- Customizer Header -->
+                <div class="dt-customizer__header">
+                    <!-- Customizer Title -->
+                    <div class="dt-customizer__title">
+                        <h3 class="mb-0 text-capitalize" id="lang-header">Create ticket</h3>
+                    </div>
+                    <!-- /customizer title -->
+                    <!-- Close Button -->
+                    <button type="button" class="close" data-toggle="customizer">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <!-- /close button -->
+                </div>
+                <!-- /customizer header -->
+
+                <!-- Customizer Body -->
+                <div class="dt-customizer__body ps-custom-scrollbar ps">
+                <div class="loader" id="LangSettingsloader" style="display: none;"></div>
+                    <!-- Customizer Body Inner  -->
+                    <div class="dt-customizer__body-inner" id="sideContent">
+                        <form method="post">
+                                            {% csrf_token%}                                                              
+                               
+                            <div class="form-group">
+                                <label for="id_subject">Subject:</label>
+                                {{ form.subject }}
+                                
+                            </div>
+                               
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="id_category">Category:</label>
+                                    {{ form.category }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="id_priority">Priority:</label>
+                                    {{ form.priority }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_message">Message:</label>
+                                {{ form.message }}
+                            </div>
+                            <button type="submit" class="btn btn-info w-100 hide text-capitalize" style="display: inline-block;">Create</button>
+                        </form>                 
+                    </div>
+                    <!-- /customizer body inner -->
+                </div>
+                <!-- /customizer body -->
+            </div>
+        </aside>        </div>
+        </div>
+    </div><!-- Footer --><!-- Footer --><!-- Footer --><!-- Footer -->
+    <script src="{% static 'assets2/js/tickets.js' %}"></script><!-- Footer -->
+<footer class="dt-footer">
+
+    Copyright High Bit Trade © 2023</footer>
+<!-- /footer -->
+
+</div>
+<!-- /site content wrapper -->
+</main>
+</div>
+</div>
+<script src="{% static 'assets2/js/summernote-bs4.js' %}"></script>
+<script src="{% static 'assets2/js/lang.js' %}"></script>
+<script src="{% static 'assets2/js/editor-summernote.js' %}"></script>
+<script src="{% static 'assets2/js/moment/moment.js' %}"></script>
+<script src="{% static 'assets2/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets2/js/contact.js' %}"></script>
+<script src="{% static 'assets2/js/perfect-scrollbar.min.js' %}"></script>
+<script src="{% static 'assets2/js/masonry.pkgd.min.js' %}"></script>
+<script src="{% static 'assets2/js/sweetalert2.js' %}"></script>
+<script src="{% static 'assets2/js/customizer.js' %}"></script>
+<script src="{% static 'assets2/js/Chart.min.js' %}"></script>
+<script src="{% static 'assets2/js/chartist.min.js' %}"></script>
+<script src="{% static 'assets2/js/script.js' %}"></script>
+</body>
+</html>

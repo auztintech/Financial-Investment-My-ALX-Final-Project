@@ -1,0 +1,67 @@
+{% load static %}
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="High Bit Trade is an investment company that aggregates funds for investment in bitcoin and forex trading.                                                                                                                                                                                                                                                                                                                                                                                                          ">
+    <meta name="keywords" content="High Bit Trade, bitcoin trading, forex, investment, trading                                                                                                                                                                                                                                                                                                                                                                                                                                                         ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <title>{% block title %}{% if page_title %}{{ page_title }}-{% endif %}{{ site_name }}-{{tagline}}{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    
+    <link rel="shortcut icon" href="{% static 'assets2/uploads/favicon1.png' %}">
+    
+    <!-- Font Icon Styles -->
+    <link rel="stylesheet" href="{% static 'assets2/css/icons.css' %}">
+
+    <!-- Font Awesome core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+
+    <!-- /font icon Styles -->
+    <!-- Load Styles -->
+    <link rel="stylesheet" href="{% static 'assets2/css/bootstrap-formhelpers.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets2/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets2/css/chartist.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets2/css/style.min.css' %}">
+    <!-- /load styles -->
+    <!-- include summernote css/js -->
+    <link href="{% static 'assets2/css/summernote-bs4.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets2/css/intlTelInput.css' %}">
+
+    <script src="{% static 'assets2/js/jquery.min.js' %}"></script>
+    <style type="text/css">/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
+    <body class="dt-header--fixed theme-dark dt-layout--full-width o-auto dt-sidebar--fixed"><style></style>
+            <!-- Root -->
+         <div class="dt-root op-1">
+                <div class="dt-root__inner">
+                                    <!-- Header -->
+        
+       
+{% include 'dashboard_header2.html' %}
+{% include 'dashboard_side.html' %}
+
+{% block content %}
+
+
+
+{% endblock content %}
+
+
+
+<script src="{% static 'assets2/js/summernote-bs4.js' %}"></script>
+<script src="{% static 'assets2/js/lang.js' %}"></script>
+<script src="{% static 'assets2/js/editor-summernote.js' %}"></script>
+<script src="{% static 'assets2/js/moment.js' %}"></script>
+<script src="{% static 'assets2/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets2/js/contact.js' %}"></script>
+<script src="{% static 'assets2/js/perfect-scrollbar.min.js' %}"></script>
+<script src="{% static 'assets2/js/masonry.pkgd.min.js' %}"></script>
+<script src="{% static 'assets2/js/sweetalert2.js' %}"></script>
+<!-- <script src="{% static 'assets2/js/customizer.js' %}"></script> -->
+<script src="{% static 'assets2/js/Chart.min.js' %}"></script>
+<script src="{% static 'assets2/js/chartist.min.js' %}"></script>
+<script src="{% static 'assets2/js/script.js' %}"></script><div class="card user-bg-card position-absolute bg-primary" style="display: none;"></div>
+
+</body></html>

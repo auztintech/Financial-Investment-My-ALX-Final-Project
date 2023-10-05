@@ -1,0 +1,201 @@
+{% extends "dashboard_base2.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+
+
+
+
+
+<div class="dt-content-wrapper">
+
+    <!-- Site Content -->
+    <div class="dt-content">
+        <!-- Profile -->
+        <div class="profile">
+
+            <!-- Profile Banner -->
+            <div class="profile__banner">
+
+                <!-- Page Header -->
+                <div class="dt-page__header">
+                    <h1 class="dt-page__title text-light display-i">Deposits/New deposit</h1>
+                                        <a href="" class="btn btn-light btn-sm display-i ft-right">My deposits</a>
+                    
+                    <div class="dt-entry__header mt-1m">
+                        <!-- Entry Heading -->
+                        <div class="dt-entry__heading">
+                        </div>
+                        <!-- /entry heading -->
+                    </div>
+                </div>
+                <!-- /page header -->
+
+                <div class="profile__banner-detail">
+                    <!-- Avatar Wrapper -->
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- Grid Item -->
+                            <div class="col-sm-6 col-12 z0">
+
+                            </div>
+                            <!-- Grid Item -->
+
+                            <!-- Grid Item -->
+                            <div class="col-sm-6 col-12">
+
+                                <!-- Card -->
+                                <div class="dt-card dt-card__full-height text-dark">
+
+                                    <!-- Card Body -->
+                                    <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4">
+                                        <span class="badge badge-secondary badge-top-right">
+                                            All deposits                                        </span>
+                                        <!-- Media -->
+                                        <div class="media">
+
+                                            <i style="font-size: 20px;margin-right: 10px;align-self: center;" class="fa fa-handshake-o" aria-hidden="true"></i>
+
+                                            <!-- Media Body -->
+                                            <div class="media-body">
+                                                <div class="display-3 font-weight-600 mb-1 init-counter">
+                                                    $ {{user.balance}}                                               </div>
+                                                <span class="d-block">
+                                                    Total deposits                                                </span>
+                                            </div>
+                                            <!-- /media body -->
+
+                                        </div>
+                                        <!-- /media -->
+                                    </div>
+                                    <!-- /card body -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </div>
+                            <!-- Grid Item -->
+                        </div>
+                    </div>
+                    <!-- /avatar wrapper -->
+                </div>
+
+            </div>
+            <!-- /profile banner -->
+
+            <!-- Profile Content -->
+            <div class="profile-content marg-t-17 marg-t-0 ">
+
+                <!-- Grid -->
+                <div class="row">
+
+                    <!-- Grid Item -->
+                    <div class="col-xl-6 col-md-6 col-12 order-xl-1 z20">
+                        <!-- Card -->
+                        <div class="dt-card">
+                            <div class="dt-card__body">
+                                                                <div class="row">
+                                    <div class="col-md-12">
+                                                                            </div>
+                                </div>
+                            </div>
+                            <!-- Card Body -->
+                                                        <div class="dt-card__body">
+                                                          <h3>Plan selected: {{plan_selected.plan_name}}</h3>
+
+                                <!-- Form -->
+                                <form  id="addWithdrawal" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_test_name" value="bad9a9558bc1b2f3a99e7957b5ff59c9" /> 
+                                    <div class="row">
+                                      {% include "message.html" %}
+                                        <div class="col-md-12">
+                                           {% csrf_token %}
+                                                                                                                                                                                <div id="step1">
+                                                <div class="form-group">
+                                                    {{deposit_form.amount|as_crispy_field}}
+                                                    <div class="token-currency-choose payment-list">
+                                                        <div class="row guttar-15px">
+                                                                                                                        <div class="iv class="col-6"iv class="col-6"
+                                                                                                                    </div>
+                                                        <label class="display-6 text-center error font-15p"></label>
+                                                    </div>
+
+                                                </div>
+                                                <!-- Form Group -->
+                                                <div class="form-group mb-0">
+                                                    <button id="next" class="btn btn-info text-uppercase w-100">
+                                                    Proceed to pay</button>
+                                                </div>
+                                                <!-- /form group -->
+                                            </div>
+                                                                                        <div id="step2" class="display-n">
+                                                <!-- Row -->
+                                                <div class="row">
+                                                    <div class="col-md-12" id="with-step-1">
+                                                      
+                                                       
+                                                                                                            </div>
+                                                </div>
+                                                <!-- /row -->
+                                                                                                                                                <!-- Row -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+
+                                                        <div class="form-group">
+                                                            <label for="amount">Payment method</label>
+                                                            <div class="row">
+                                                                                                                                <div class="cnt_min col-md-2">
+                                                                <input type="radio" name="payMethod"
+                                                                        value="41" /><img
+                                                                        src="https://login.highbittrade.com/uploads/OIP.jpg"
+                                                                        alt="Select payment method"
+                                                                        class="selected_img">
+                                                                </div>
+                                                                                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                                                                <!-- Form Group -->
+                                                <div class="form-group mb-0">
+                                                    <button type="submit" id="submitButtonForm"
+                                                        class="btn btn-info text-uppercase w-100 mt-2m">
+                                                        Proceed to pay</button>
+                                                        <button type="submit" class="btn btn-info text-uppercase w-100 mt-2m hide" id="withdrawSubmitButton">Process withdrawal</button>
+                                                </div>
+                                                <!-- /form group -->
+                                            </div>
+                                        </div>
+                                </form>                                <!-- /form -->
+                            </div>
+                            <!-- /card body -->
+                                                    </div>
+                        <!-- /card -->
+                    </div>
+                    <!-- /grid item -->
+                </div>
+                <!-- /grid -->
+            </div>
+            <!-- /profile content -->
+        </div>
+        <!-- /Profile -->
+    </div>
+</div>
+<script src="js/functions.js"></script>
+<!-- Footer -->
+<footer class="dt-footer">
+
+    Copyright High Bit Trade © 2023</footer>
+<!-- /footer -->
+
+</div>
+<!-- /site content wrapper -->
+</main>
+</div>
+</div>
+
+
+{% endblock content %}
+

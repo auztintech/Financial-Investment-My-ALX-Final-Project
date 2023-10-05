@@ -1,0 +1,140 @@
+
+
+
+
+{% extends "dashboard_base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<!-- /Verify Modal -->        <div class="main-panel bg-dark">
+            <div class="content bg-dark">
+                <div class="page-inner">
+
+
+
+
+<script language=javascript>
+function IsNumeric(sText) {
+  var ValidChars = "0123456789.";
+  var IsNumber=true;
+  var Char;
+  if (sText == '') return false;
+  for (i = 0; i < sText.length && IsNumber == true; i++) { 
+    Char = sText.charAt(i); 
+    if (ValidChars.indexOf(Char) == -1) {
+      IsNumber = false;
+    }
+  }
+  return IsNumber;
+}
+
+function checkform() {
+  if (document.editform.fullname.value == '') {
+    alert("Please type your full name!");
+    document.editform.fullname.focus();
+    return false;
+  }
+
+
+  if (document.editform.password.value != document.editform.password2.value) {
+    alert("Please check your password!");
+    document.editform.fullname.focus();
+    return false;
+  }
+
+
+
+
+  if (document.editform.email.value == '') {
+    alert("Please enter your e-mail address!");
+    document.editform.email.focus();
+    return false;
+  }
+
+
+  return true;
+}
+</script>
+
+
+<h1>Deposit:</h1><br>
+<h3>Selected Plan: {{plan_selected.plan_name}}</h3>
+
+<h4>Make an equivalent of ${{amount_entered}} to the payment address below.</h4>
+
+
+ <form class="profit-calculator"  method="POST">
+            {% include "message.html" %}
+                <div class="row mb-none-30">
+
+                  {{company_account.account_number}} {{company_account.bank}}
+                  <div class="col-lg-12 mb-30">
+                    {{form|crispy}}
+                  </div>
+
+
+                  <style>
+  .cmn-btn {
+    background-color: #007bff; /* Set the background color */
+    color: #ffffff; /* Set the text color */
+    border: none; /* Remove the default button border */
+    padding: 10px 20px; /* Add some padding to the button */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center-align text */
+    text-decoration: none; /* Remove underlines */
+    display: inline-block; /* Display as a block element */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition effect */
+  }
+
+  .cmn-btn:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+</style>
+
+<button type="submit" class="cmn-btn">Send</button>
+
+
+
+                </div>
+                {% csrf_token %}
+              </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+

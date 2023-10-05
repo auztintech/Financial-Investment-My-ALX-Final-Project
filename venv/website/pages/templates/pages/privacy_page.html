@@ -1,0 +1,238 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TERMS AND CONDITIONS</title>
+    <base  src="index-2.html" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/icomoon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bitneo-style.css' %}">
+    <script src="{% static 'assets/js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon.png' %}">
+</head>
+
+<body>
+    <div class="wrapper bg_gradient">
+        <div class="nk-ovm nk-ovm-repeat nk-ovm-fixed shape-i">
+        </div>
+        <div class="nk-ovm shape-z"></div>
+        <section class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="indexbc14bc14.html?a=home" class="logo">
+                        <img src="{% static 'assets/img/logo.png' %}" alt="TopTosi">
+                    </a>
+                    <div class="telegram">
+                        <img src="{% static 'assets/img/telegram.svg' %}"> <a href="#"> Telegram </a>
+                    </div>
+                    <ul class="menu__main">
+                        <li>
+                            <a href="{% url 'pages:home_page' %}" class="menu__link">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pages:privacy_page' %}" class="menu__link">
+                                Terms
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pages:faq_page' %}" class="menu__link">
+                                FAQs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pages:contact_page' %}" class="menu__link pr-0">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="head__btn">
+                                                    <a href="{% url 'account_login' %}" class="btn__login"> Login </a>
+                            <a href="{% url 'account_signup' %}" class="btn__signup"> Signup </a>
+                                            </div>
+                </div>
+            </div>
+        </section>
+
+<section class="page">
+    <div class="container">
+        <div class="page__inner">
+            <div class="main__title mb-0 mt-0">
+                <span>TERMS AND CONDITIONS</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="other">
+    <div class="container">
+        <div class="other__inner">
+            <div class="faq">
+                <button class="accordion">TERMS AND CONDITIONS</button>
+                <div class="panel">
+                    <p>You agree to be of legal age in your country to partake in this program, and in all the cases your minimal
+age
+must be
+18 years.</p>
+<p>AUZTIN INVESTMENT SITE is not available to the general public and is opened only to the qualified members of
+Absolute
+Options,
+the use of this site is restricted to our members and to individuals personally invited by them. Every
+deposit
+is
+considered to be a private transaction between the icapitalnation and its Member.</p>
+<p>As a private transaction, this program is exempt from the US Securities Act of 1933, the US Securities
+Exchange
+Act of
+1934 and the US Investment Company Act of 1940 and all other rules, regulations and amendments thereof. We
+are
+not FDIC
+insured. We are not a licensed bank or a security firm.</p>
+<p>You agree that all information, communications, materials coming from icapitalnation are unsolicited and
+must
+be kept
+private, confidential and protected from any disclosure. Moreover, the information, communications and
+materials
+contained herein are not to be regarded as an offer, nor a solicitation for investments in any jurisdiction
+which deems
+non-public offers or solicitations unlawful, nor to any person to whom it will be unlawful to make such
+offer or
+solicitation.</p>
+<p>All the data giving by a member to AUZTIN INVESTMENT SITE will be only privately used and not disclosed to any third
+parties.
+AUZTIN INVESTMENT SITE is not responsible or liable for any loss of data.</p>
+<p>You agree to hold all principals and members harmless of any liability. You are investing at your own risk
+and
+you agree
+that a past performance is not an explicit guarantee for the same future performance. You agree that all
+information,
+communications and materials you will find on this site are intended to be regarded as an informational and
+educational
+matter and not an investment advice.</p>
+<p>We reserve the right to change the rules, commissions and rates of the program at any time and at our sole
+discretion
+without notice, especially in order to respect the integrity and security of the members' interests. You
+agree
+that it
+is your sole responsibility to review the current terms.</p>
+<p>AUZTIN INVESTMENT SITE is not responsible or liable for any damages, losses and costs resulting from any violation
+of
+the
+conditions and terms and/or use of our website by a member. You guarantee to icapitalnation that you will
+not
+use this
+site in any illegal way and you agree to respect your local, national and international laws.</p>
+<p>As always, a service usage fee of 15% of the accumulated profit in your account is required to process your
+withdrawal requests after a successful trading
+session.</p>
+<p>Don't post bad vote on Public Forums and at Gold Rating Site without contacting the administrator of our
+program
+FIRST.
+Maybe there was a technical problem with your transaction, so please always CLEAR the thing with the
+administrator.</p>
+<p>We will not tolerate SPAM or any type of UCE in this program. SPAM violators will be immediately and
+permanently
+removed
+from the program.</p>
+<p>AUZTIN INVESTMENT SITE reserves the right to accept or decline any member for membership without explanation.
+If you do not agree with the above disclaimer, please do not go any further.</p>
+                </div>
+                
+
+               
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+
+
+<section class="footer">
+    <div class="container">
+        
+            <div class="footer__top">
+                <div class="pays__content">
+                    <div class="pays__text">
+                        We Accept <span>Most Popular</span> CryptoCurrency</span> 
+                    </div>
+                    <div class="pays__item">
+                        <img src="{% static 'assets/img/btc.png' %}" alt="Bitcoin">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="f__logo">
+                <img src="{% static 'assets/img/logo.png' %}">
+            </div>
+            <div class="footer__mid">
+                <div class="finfo">
+                    <div class="finfo__icon">
+                        <i class="icon-location3"></i>
+                    </div>
+                    <div class="finfo__title">
+                        <p>1147 E FLORENCE LOS ANGELES CA 90001-2466 USA</p>
+                    </div>
+                </div>
+                <div class="finfo">
+                    <div class="finfo__icon">
+                        <i class="icon-phone2"></i>
+                    </div>
+                    <div class="finfo__title">
+                        <p></p>+971 50 421 5712
+                    </div>
+                </div>
+                <div class="finfo">
+                    <div class="finfo__icon">
+                        <i class="icon-mention"></i>
+                    </div>
+                    <div class="finfo__title">
+                        <p></p>support@profitoptionlead.com
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bot">
+                <div class="copyright">
+                    &copy; 2017. <strong>Profit Option</strong>. All Rights Reserved.
+                </div>
+                <div class="terms__link">
+                    <a href="{% url 'pages:privacy_page' %}">Terms of Services</a>
+                    <a href="{% url 'pages:contact_page' %}">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+
+</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+{% load static %}
+
+                <header class="dt-header">
+                    <!-- Header container -->
+                    <div class="dt-header__container">
+                        <!-- Brand -->
+                        <div class="dt-brand">
+                            <!-- Brand tool -->
+                            <div class="dt-brand__tool" data-toggle="main-sidebar">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                            <!-- /brand tool -->
+
+                            <!-- Brand logo -->
+                            <span class="dt-brand__logo">
+                                <a class="dt-brand__logo-link" href="{% url 'user:dashboard' %}">
+                                <img class="d-none d-sm-inline-block w-100" src="{% static 'assets2/uploads/StockPl1.png' %}" alt="logo">
+                                <img class="dt-brand__logo-symbol d-sm-none" src="{% static 'assets2/uploads/StockPl1.png' %}" alt="logo">
+                                </a>
+                            </span>
+                            <!-- /brand logo -->
+
+                        </div>
+                        <!-- /brand -->
+
+                        <!-- Header toolbar-->
+                        <div class="dt-header__toolbar">
+                        
+
+                            <div class="search-box d-none d-lg-block">
+                            <h1 class="dt-page__title mt-4" style="margin-left: -1.5em;">User ID <i style="font-size: 14px;" class="fa fa-chevron-right"></i> 495{{user.id}}</h1>
+                                                        </div>
+
+                            <!-- Header Menu Wrapper -->
+                            <div class="dt-nav-wrapper">
+                                <!-- Header Menu -->
+                                <ul class="dt-nav d-lg-none">
+                                    <li class="dt-nav__item dt-notification-search dropdown">
+
+                                        <!-- Dropdown Link -->
+                                        <a href="#" class="dt-nav__link dropdown-toggle no-arrow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i style="font-size: 14px;"  class="fa fa-search"></i> </a>
+                                        <!-- /dropdown link -->
+
+                                        <!-- Dropdown Option -->
+                                        <div class="dropdown-menu">
+
+                                            <!-- Search Box -->
+                                            <form class="search-box right-side-icon">
+                                                <input class="form-control form-control-lg" type="search" placeholder="Search in app...">
+                                                <button type="submit" class="search-icon"><i style="font-size: 14px;" class="fa fa-search"></i></button>
+                                            </form>
+                                            <!-- /search box -->
+
+                                        </div>
+                                        <!-- /dropdown option -->
+
+                                    </li>
+                                </ul>
+                                <!-- /header menu -->
+                                <!-- Header Menu -->
+                                <ul class="dt-nav">
+                                    <li class="dt-nav__item dropdown">
+      
+                                        <!-- Dropdown Link -->
+                                        <a href="#" class="dt-nav__link" id="currentLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img class="flag-icon flag-icon-rounded flag-icon-lg mr-1m" src="{% static 'assets2/uploads/gb-eng.png' %}">
+                                        <span>EN</span> <i style="font-size: 14px;margin-left:7px;" class="fa fa-chevron-down"></i> </a>
+                                        <!-- /dropdown link -->
+
+                                        <!-- Dropdown Option -->
+                                        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(8px, 72px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/gb-eng.png' %}"><span>English</span> </button>
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/russia.png' %}"><span>Russian</span> </button>
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/portuguese.png' %}"><span>Português</span> </button>
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/spain.png' %}"><span>Español</span> </button>
+                                                                                        <button class="dropdown-item sitelangChange" type="button" data-id="">
+                                            <img class="flag-icon flag-icon-rounded flag-icon-lg mr-2" src="{% static 'assets2/uploads/germany.png' %}"><span>German</span> </button>
+                                                                                    </div>
+                                        <!-- /dropdown option -->
+
+                                    </li>
+                                </ul>
+                                <!-- /header menu -->
+
+                                <!-- Header Menu -->
+                                <ul class="dt-nav">
+                                    <li class="dt-nav__item dropdown">
+
+                                        <!-- Dropdown Link -->
+                                        <a href="#" class="dt-nav__link dropdown-toggle no-arrow dt-avatar-wrapper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img class="dt-avatar size-30" src="{% static 'assets2/uploads/avatar.png' %}" alt="First Lastie">
+                                            <span class="dt-avatar-info d-none d-sm-block">
+                                                <span class="dt-avatar-name">{{user.username}}</span>
+                                                                                                        <span>Verify Your Account</span>
+                                                                                                </span> </a>
+                                        <!-- /dropdown link -->
+
+                                        <!-- Dropdown Option -->
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="{% url 'user:profile' %}"> <i style="font-size: 12px;margin-right: 10px;" class="fa fa-user"></i>Account                                            </a>
+                                            <a class="dropdown-item" href="{% url 'account_logout' %}"> <i style="font-size: 12px;margin-right: 10px;" class="fa fa-pencil"></i>Logout                                            </a>
+                                        </div>
+                                        <!-- /dropdown option -->
+
+                                    </li>
+                                </ul>
+                                <!-- /header menu -->
+                            </div>
+                            <!-- Header Menu Wrapper -->
+
+                        </div>
+                        <!-- /header toolbar -->
+
+                    </div>
+                    <!-- /header container -->
+
+                </header>
+                <!-- /header -->

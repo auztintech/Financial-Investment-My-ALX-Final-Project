@@ -1,0 +1,301 @@
+
+{% extends "dashboard_base2.html" %}
+{% load static %}
+
+
+
+
+{% block content %}
+                    <!-- Site Content Wrapper -->
+<div class="dt-content-wrapper">
+
+    <!-- Site Content -->
+    <div class="dt-content">
+        <!-- Profile -->
+        <div class="profile">
+
+            <!-- Profile Banner -->
+            <div class="profile__banner">
+
+                <!-- Page Header -->
+                <div class="dt-page__header">
+                    <h1 class="dt-page__title text-light display-i">Deposits/New deposit</h1>
+                                        <a href="viewDeposit.html" class="btn btn-light btn-sm display-i ft-right">My deposits</a>
+                    
+                    <div class="dt-entry__header mt-1m">
+                        <!-- Entry Heading -->
+                        <div class="dt-entry__heading">
+                        </div>
+                        <!-- /entry heading -->
+                    </div>
+                </div>
+                <!-- /page header -->
+
+                <div class="profile__banner-detail">
+                    <!-- Avatar Wrapper -->
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- Grid Item -->
+                            <div class="col-sm-6 col-12 z0">
+
+                            </div>
+                            <!-- Grid Item -->
+
+                            <!-- Grid Item -->
+                            <div class="col-sm-6 col-12">
+
+                                <!-- Card -->
+                                <div class="dt-card dt-card__full-height text-dark">
+
+                                    <!-- Card Body -->
+                                    <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4">
+                                        <span class="badge badge-secondary badge-top-right">
+                                            All deposits</span>
+                                            
+                                        <!-- Media -->
+                                        <div class="media">
+
+                                            <i style="font-size: 20px;margin-right: 10px;align-self: center;" class="fa fa-handshake-o" aria-hidden="true"></i>
+
+                                            <!-- Media Body -->
+                                            <div class="media-body">
+                                                <div class="display-3 font-weight-600 mb-1 init-counter">
+                                                    BRL {{user.balance}}                                                </div>
+                                                <span class="d-block">
+                                                    Total deposits                                                </span>
+                                            </div>
+                                            <!-- /media body -->
+
+                                        </div>
+                                        <!-- /media -->
+                                    </div>
+                                    <!-- /card body -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </div>
+                            <!-- Grid Item -->
+                        </div>
+                    </div>
+                    <!-- /avatar wrapper -->
+                </div>
+
+            </div>
+            <!-- /profile banner -->
+
+            <!-- Profile Content -->
+            <div class="profile-content marg-t-17 marg-t-0 ">
+
+                <!-- Grid -->
+                <div class="row">
+
+                    <!-- Grid Item -->
+                    <div class="col-xl-6 col-md-6 col-12 order-xl-1 z20">
+                        <!-- Card -->
+                        <div class="dt-card">
+                            <div class="dt-card__body">
+                                                                <div class="row">
+                                    <div class="col-md-12">
+                                                                            </div>
+                                </div>
+                            </div>
+                            <!-- Card Body -->
+                                                        <div class="dt-card__body">
+                                <!-- Form -->
+                                <form    accept-charset="utf-8">
+<input type="hidden"   /> 
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                                                                                                                                                                <div id="step1">
+                                                <div class="form-group">
+                                                    <label class="display-6" for="fname">Select your preferred investment plan</label>
+                                                    <div class="token-currency-choose payment-list">
+                                                        <div class="row guttar-15px">
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                {% for plan in plans %}
+                                                                <div class="col-6">
+                                                                <div class="payment-item pay-option">
+                                                                  
+                                                                    <input class="pay-option-check pay-method"
+                                                                        type="radio"
+                                                                        id="Beginner Plan1"
+                                                                        min="100.00"
+                                                                        max="500.00"
+                                                                        name="plan" value="1">
+
+                                                                    <label class="pay-option-label"
+                                                                        for="Beginner Plan1">
+                                                                        <span
+                                                                            class="text-center display-7">{{plan.plan_name}} <br><br>
+                                                                             {{plan.percentage}}% {{plan.plan_duration}} Days</span>
+                                                                        <br>
+                                                                        <span
+                                                                            class="text-center display-7">${{plan.min_deposit}} - ${{plan.max_deposit}}</span>
+                                                                            <a href="{% url 'wallet:make_deposit_detail' plan.plan_name %}">Choose Plan &gt;&gt;</a>
+                                                                    </label>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            {% endfor %}
+                                                            <div>
+                                                        <label class="display-6 text-center error font-15p"></label>
+                                                    </div>
+
+                                                </div>
+
+                                                <!-- Form Group -->
+                                                <div class="form-group mb-0">
+                                                    <butto  class="btn btn-info text-uppercase w-100">
+                                                    Select Plan</button>
+                                                </div>
+                                                <!-- /form group -->
+                                            </div>
+                                                                                        <div id="step2" class="display-n">
+                                                <!-- Row -->
+                                                <div class="row">
+                                                    <div class="col-md-12" id="with-step-1">
+                                                        <!-- Form Group -->
+                                                        <div class="form-group">
+                                                            <label for="amount">Enter amount</label>
+                                                            <div class="input-group">
+                                                                <input type="number" class="form-control myElements" step="any" name="amount"
+                                                                value="" id="amount" aria-describedby="amount"
+                                                                placeholder="Enter amount" onkeyup="transfee(this);">
+                                                                <div class="input-group-prepend hide" id="tr-ref-sel">
+                                                                    <span class="input-group-text" id="inputGroupPrepend2"></span>
+                                                                </div>
+                                                            </div>
+                                                            <label class="error" id="amountWithError"></label>
+                                                        </div>
+                                                        <!-- /form group -->
+                                                        <!-- VISA/Mastercard withdrawal -->
+                                                        <div class="hide" id="vsms-withdrawal">
+                                                            <div class="row">
+                                                                <div class="form-group col-md-12">
+                                                                    <label for="cardNumber">Card number</label>
+                                                                    <div class="input-group" id="cardnumber12">
+                                                                        <input type="text" class="form-control card-number required" step="any" name="cardNumber"
+                                                                        value="" aria-describedby="cardNumber"
+                                                                        placeholder="1234-5678-1234-5678">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- VISA/Mastercard withdrawal -->
+                                                        <!-- Bank withdrawal -->
+                                                        <div class="hide" id="bank-withdrawal">
+                                                            <div class="row">
+                                                                <div class="form-group col-md-12">
+                                                                    <label for="bank_account">Bank Name</label>
+                                                                    <input type="text" class="form-control required" step="any" name="bank_name"
+                                                                        value="" aria-describedby="bank_account">
+                                                                </div>
+                                                                <div class="form-group col-md-12">
+                                                                    <label for="account_name">Account Name</label>
+                                                                    <input type="text" class="form-control required" step="any" name="account_name"
+                                                                        value="" aria-describedby="account_name">
+                                                                </div>
+                                                                <div class="form-group col-md-12">
+                                                                    <label for="account_number">Account Number</label>
+                                                                    <input type="text" class="form-control required" step="any" name="account_number"
+                                                                        value="" aria-describedby="account_number">
+                                                                </div>
+                                                                <div class="form-group col-md-12">
+                                                                    <label for="swift_code">SWIFT-Code</label>
+                                                                        <input type="text" class="form-control required" step="any" name="swift_code"
+                                                                        value="" aria-describedby="swift_code">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Bank withdrawal -->
+                                                        <!-- Form Group -->
+                                                                                                            </div>
+                                                </div>
+                                                <!-- /row -->
+                                                                                                                                                <!-- Row -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+
+                                                        <div class="form-group">
+                                                            <label for="amount">Payment method</label>
+                                                            <div class="row">
+                                                                                                                                <div class="cnt_min col-md-2">
+                                                                    <input type="radio" name="payMethod"
+                                                                        value="41" /><img
+                                                                        src="https://login.highbittrade.com/uploads/OIP.jpg"
+                                                                        alt="Select payment method"
+                                                                        class="selected_img">
+                                                                </div>
+                                                                                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                                                                <!-- Form Group -->
+                                                <div class="form-group mb-0">
+                                                    <button type="submit" id="submitButtonForm"
+                                                        class="btn btn-info text-uppercase w-100 mt-2m">
+                                                        Proceed to pay</button>
+                                                        <button type="submit" class="btn btn-info text-uppercase w-100 mt-2m hide" id="withdrawSubmitButton">Process withdrawal</button>
+                                                </div>
+                                                <!-- /form group -->
+                                            </div>
+                                        </div>
+                                </form>                                <!-- /form -->
+                            </div>
+                            <!-- /card body -->
+                                                    </div>
+                        <!-- /card -->
+                    </div>
+                    <!-- /grid item -->
+                </div>
+                <!-- /grid -->
+            </div>
+            <!-- /profile content -->
+        </div>
+        <!-- /Profile -->
+    </div>
+</div>
+<script src="{% static 'assets2/js/functions.js' %}"></script>
+<!-- Footer -->
+<footer class="dt-footer">
+
+    Copyright Profit Option © 2023</footer>
+<!-- /footer -->
+
+</div>
+<!-- /site content wrapper -->
+</main>
+</div>
+</div>
+{% endblock content %}
+
+
+
+
+

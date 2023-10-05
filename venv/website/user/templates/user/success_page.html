@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .success-icon {
+            font-size: 60px;
+            color: #4CAF50;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 18px;
+            color: #777;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="success-container">
+        <div class="success-icon">&#10004;</div>
+        <h1>Success!</h1>
+        <p>Verification Data Submitted!</p>
+        <p>Click <a href="{% url 'user:dashboard' %}" id="home-link"> here</a> to Continue to Dashboard</p>
+        
+    </div>
+
+    <script>
+        // JavaScript for adding animation
+        const container = document.getElementById("success-container");
+        const homeLink = document.getElementById("home-link");
+
+        setTimeout(() => {
+            container.style.opacity = "1";
+            container.style.transform = "translateY(0)";
+        }, 100);
+
+        // Add hover effect to the home link
+        homeLink.addEventListener("mouseover", () => {
+            homeLink.style.textDecoration = "underline";
+        });
+
+        homeLink.addEventListener("mouseout", () => {
+            homeLink.style.textDecoration = "none";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>F.A.Q.</title>
+    <base  src="index-2.html" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/icomoon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bitneo-style.css' %}">
+    <script src="{% static 'assets/js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon.png' %}">
+</head>
+
+<body>
+    <div class="wrapper bg_gradient">
+        <div class="nk-ovm nk-ovm-repeat nk-ovm-fixed shape-i">
+        </div>
+        <div class="nk-ovm shape-z"></div>
+        <section class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="indexbc14bc14.html?a=home" class="logo">
+                        <img src="{% static 'assets/img/logo.png' %}" alt="TopTosi">
+                    </a>
+                    <div class="telegram">
+                        <img src="{% static 'assets/img/telegram.svg' %}"> <a href="#"> Telegram </a>
+                    </div>
+                    <ul class="menu__main">
+                        <li>
+                            <a href="{% url 'pages:home_page' %}" class="menu__link">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pages:privacy_page' %}" class="menu__link">
+                                Terms
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pages:faq_page' %}" class="menu__link">
+                                FAQs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pages:contact_page' %}" class="menu__link pr-0">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="head__btn">
+                                                    <a href="{% url 'account_login' %}" class="btn__login"> Login </a>
+                            <a href="{% url 'account_signup' %}" class="btn__signup"> Signup </a>
+                                            </div>
+                </div>
+            </div>
+        </section>
+
+<section class="page">
+    <div class="container">
+        <div class="page__inner">
+            <div class="main__title mb-0 mt-0">
+                <span>Frequently Asked Questions</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="other">
+    <div class="container">
+        <div class="other__inner">
+            <div class="faq">
+                <button class="accordion">What is AUZTIN INVESTMENT SITE?</button>
+                <div class="panel">
+                    <p>AUZTIN INVESTMENT SITE is a Leader in Cryptocurrency investment. We operates daily trading of Crypto by its
+                        own expertise trading methods, and generates huge profits daily from the total funds collected.
+                    </p>
+                </div>
+                <button class="accordion">Who can be a client of AUZTIN INVESTMENT SITE?</button>
+                <div class="panel">
+                    <p>Everyone may be client of AUZTIN INVESTMENT SITE, regardless of nationality or residence. The only
+                        condition is, you must be of mature age (at least 18 years old) to become our client.</p>
+                </div>
+
+                <button class="accordion">How secure and safe my funds and personal information?</button>
+                <div class="panel">
+                    <p>Our website has several degrees of protection. Its servers are protected from DDoS attacks,
+                        and all the data is transferred by a protected channel that is provided with Comodo EV SSL
+                        certificate.</p>
+                </div>
+
+                <button class="accordion">How can I invest with AUZTIN INVESTMENT SITE ?</button>
+                <div class="panel">
+                    <p>To make a investment you must first become a member of AUZTIN INVESTMENT SITE. Once you are signed up,
+                        you can make your first deposit. All deposits must be made through the Members Area. You can
+                        login using the member username and password you receive when signup.</p>
+                </div>
+
+                <button class="accordion">What payment methods are acceptable?</button>
+                <div class="panel">
+                    <p>AUZTIN INVESTMENT SITE accepts popular cryptocurrency such as Bitcoin 
+                </div>
+
+                <button class="accordion">What are the minimum and maximum limits for deposits?</button>
+                <div class="panel">
+                    <p>Yes, Minimum for investment is $100 and maximum is $50000</p>
+                </div>
+
+                <button class="accordion">What are the minimum of withdraw?</button>
+                <div class="panel">
+                    <p>Yes, Minimum withdraw BTC $200, </p>
+                </div>
+
+                <button class="accordion">How long i recive money after withdraw?</button>
+                <div class="panel">
+                    <p>Yes, All withdraw on our system is instant.</p>
+                </div>
+
+                <button class="accordion">Do you charge fees for payouts?</button>
+                <div class="panel">
+                    <p>No,We never charge any fees for any transaction.However, payment processors may charge you
+                        with receiving fees and we have no control over that.</p>
+                </div>
+
+                <button class="accordion">Do you have affiliate program?</button>
+                <div class="panel">
+                    <p>Yes, We have 3 level of referrals commission: 5% first level, 15% second level and 20% third level.
+                        And you can earning money without invest with our affiliate program.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+
+
+<section class="footer">
+    <div class="container">
+        
+            <div class="footer__top">
+                <div class="pays__content">
+                    <div class="pays__text">
+                        We Accept <span>Most Popular</span> CryptoCurrency</span> 
+                    </div>
+                    <div class="pays__item">
+                        <img src="{% static 'assets/img/btc.png' %}" alt="Bitcoin">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="f__logo">
+                <img src="{% static 'assets/img/logo.png' %}">
+            </div>
+            <div class="footer__mid">
+                <div class="finfo">
+                    <div class="finfo__icon">
+                        <i class="icon-location3"></i>
+                    </div>
+                    <div class="finfo__title">
+                        <p>1147 E FLORENCE LOS ANGELES CA 90001-2466 USA</p>
+                    </div>
+                </div>
+                <div class="finfo">
+                    <div class="finfo__icon">
+                        <i class="icon-phone2"></i>
+                    </div>
+                    <div class="finfo__title">
+                        <p></p>+13202474267
+                    </div>
+                </div>
+                <div class="finfo">
+                    <div class="finfo__icon">
+                        <i class="icon-mention"></i>
+                    </div>
+                    <div class="finfo__title">
+                        <p></p>support@AUZTIN INVESTMENT SITE.com
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bot">
+                <div class="copyright">
+                    &copy; 2017. <strong>AUZTIN INVESTMENT SITE</strong>. All Rights Reserved.
+                </div>
+                <div class="terms__link">
+                    <a href="{% url 'pages:privacy_page' %}">Terms of Services</a>
+                    <a href="{% url 'pages:contact_page' %}">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+
+</section>
+</div>
+</body>
+</html>

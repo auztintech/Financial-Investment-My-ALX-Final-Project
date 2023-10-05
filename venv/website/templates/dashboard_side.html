@@ -1,0 +1,89 @@
+{% load static %}
+
+               <!-- Site Main -->
+                <main class="dt-main">
+                    <!-- Sidebar -->
+                    <aside id="main-sidebar" class="dt-sidebar ps">
+                                                <div class="dt-sidebar__container mt-10">
+
+                            <!-- Sidebar Navigation -->
+                            <ul class="dt-side-nav">
+                                                                <li class="dt-side-nav__item selected">
+                                    <a href="{% url 'user:dashboard' %}" class="dt-side-nav__link dt-active" title="Dashboard">
+                                        <i style="font-size: 16px;" class="fa fa-tachometer" aria-hidden="true"></i>
+                                        <span class="dt-side-nav__text">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="dt-side-nav__item ">
+                                    <a href="javascript:void(0)" class="dt-side-nav__link" title="Dashboard">
+                                        <i style="font-size: 16px;" class="fa fa-money"></i> <span class="dt-side-nav__text">Deposits</span> <i style="font-size: 12px;margin-left: 15px;" class="fa fa-chevron-down"></i></a>
+
+                                    <!-- Sub-menu -->
+                                    <ul class="dt-side-nav__sub-menu display-b">
+                                        <li
+                                            class="dt-side-nav__item open ">
+                                            <a href="{% url 'wallet:make_deposit' %}"
+                                                class="dt-side-nav__link "
+                                                title="Traffic">
+                                                <span class="dt-side-nav__text">Deposit funds</span> </a>
+                                        </li>
+
+
+                                        <li class="dt-side-nav__item">
+                                            <a href="{% url 'wallet:deposit_history' %}"
+                                                class="dt-side-nav__link"
+                                                title="Revenue">
+                                                <span class="dt-side-nav__text">View deposits</span> </a>
+                                        </li>
+                                    </ul>
+                                    <!-- /sub-menu -->
+
+                                </li>
+                                <li class="dt-side-nav__item ">
+                                    <a href="javascript:void(0)" class="dt-side-nav__link" title="Dashboard">
+                                        <i style="font-size: 16px;" class="fa fa-handshake-o"></i><span class="dt-side-nav__text">Withdrawals</span> <i style="font-size: 12px;margin-left: 15px;" class="fa fa-chevron-down"></i></a></a>
+
+                                    <!-- Sub-menu -->
+                                    <ul class="dt-side-nav__sub-menu display-n">
+                                        <li class="dt-side-nav__item open ">
+                                            <a href="{% url 'wallet:ask_for_withdraw' %}" class="dt-side-nav__link " title="Traffic">
+                                                <span class="dt-side-nav__text">Withdraw funds</span> </a>
+                                        </li>
+
+                                        <li class="dt-side-nav__item">
+                                            <a href="{% url 'wallet:withdraw_history' %}" class="dt-side-nav__link " title="Revenue">
+                                                <span class="dt-side-nav__text">View withdrawals</span> </a>
+                                        </li>
+                                    </ul>
+                                    <!-- /sub-menu -->
+
+                                </li>
+                                <li class="dt-side-nav__item ">
+                                    <a href="{% url 'wallet:earning_history' %}" class="dt-side-nav__link " title="Earnings">
+                                        <i style="font-size: 16px;" class="fa fa-tachometer" aria-hidden="true"></i>
+                                        <span class="dt-side-nav__text">Earnings</span>
+                                    </a>
+                                </li>
+                                <li class="dt-side-nav__item ">
+                                    <a href="{% url 'referral:all_ref' %}" class="dt-side-nav__link " title="My Referrals">
+                                        <i style="font-size: 16px;" class="fa fa-user-plus" aria-hidden="true"></i>
+                                        <span class="dt-side-nav__text">My Referrals</span>
+                                    </a>
+                                </li>
+                                <li class="dt-side-nav__item ">
+                                    <a href="{% url 'user:create_ticket' %}" class="dt-side-nav__link" title="Support">
+                                        <i style="font-size: 16px;" class="fa fa-envelope-o" aria-hidden="true"></i>
+                                        <span class="dt-side-nav__text">Help Desk</span>
+                                    </a>
+                                </li>
+                                <!-- Menu Header -->
+                                
+                                <!-- /menu item -->
+
+                            </ul>
+                            <!-- /sidebar navigation -->
+
+                        </div>
+                                            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div>
+                                        </aside>
+                    <!-- /sidebar -->

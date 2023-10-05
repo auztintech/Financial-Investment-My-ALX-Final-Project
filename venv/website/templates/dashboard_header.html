@@ -1,0 +1,303 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+
+    <title>{% block title %}{% if page_title %}{{ page_title }}-{% endif %}{{ site_name }}-{{tagline}}{% endblock %}</title>
+    <link rel="icon" href="images/monero.png" type="image/png"/>
+
+	<!-- Fonts and icons -->
+	<script src="js/webfont.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="{% static 'assets5/js/sweetalert.min.js' %}"></script>
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="{% static 'assets5/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets5/css/fonts.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets5/css/atlantis.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets5/css/style.css' %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+
+    <!-- Font Awesome core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	
+	<style>
+table.tab {    font-size: 14px;
+    color: #ffffff;
+    width: 100%;
+    border-width: 1px;
+    border-color: #DA0014;
+    border-collapse: collapse;
+    /* font-weight: 600; */
+    font-family: sans-serif;
+    letter-spacing: 1px;}
+table.tab th {
+font-size: 14px;
+    background-color: #0e1221;
+    border-width: 1px;
+    padding: 14px;
+    border-style: solid;
+    border-color: #0e1221;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    letter-spacing: 0px;
+}
+table.tab tr {}
+table.tab td {    font-size: 14px;
+    border-width: 1px;
+     padding: 14px;
+    border-style: solid;
+    border-color: #252b41;
+    background-color: #151a2b;}
+
+
+table.blank {font-size: 14px;
+    color: #000;
+    width: 100%;
+    border-width: 1px;
+    border-color: #DA0014;
+    border-collapse: collapse;
+    /* font-weight: 600; */
+    font-family: sans-serif;
+    letter-spacing:.5px;}
+table.blank th {font-size:14px;background-color:#abd28e;border-width: 0px;padding: 8px;border-style: solid;border-color: #9dcc7a;text-align:left;}
+table.blank tr {}
+table.blank td {font-size:14px;border-width: 0px;padding: 8px;border-style: solid;border-color: #9dcc7a;}
+</style>
+</head>
+<body data-background-color="dark">
+    <div id="app">
+         
+            
+ 
+        <!--End of Tawk.to Script-->
+        <div class="wrapper">
+                    <div class="main-header">
+    <!-- Logo Header -->
+    <div class="logo-header" data-background-color="dark">
+        <a href="/" class="logo" style="font-size: 27px; color:#fff;">
+            fxsupertrade
+        </a>
+        <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+        </button>
+        <button class="topbar-toggler more"><i class="fas fa-ellipsis-v"></i></button>
+        <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <!-- End Logo Header -->
+
+    <!-- Navbar Header -->
+    <nav class="navbar navbar-header navbar-expand-lg" data-background-color="dark">
+        
+        <div class="container-fluid">
+            <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+              
+                <li class="nav-item dropdown hidden-caret">
+                    <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        
+                    </a>
+                    <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+                        
+                        
+                        <li>
+                            <a class="see-all" href="#">See all notifications<i class="fas fa-angle-right"></i> </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown hidden-caret">
+                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user animated fadeIn">
+                        <div class="dropdown-user-scroll scrollbar-outer">
+                            <li>
+                                <a class="dropdown-item" href="{% url 'account_change_password' %}">Security Setting</a>
+                                <a class="dropdown-item" href="{% url 'user:profile' %}">Update Account</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'account_logout' %}"
+                                    >
+                                    Logout
+                                    </a>
+                                <form id="logout-form" action="/?a=logout" method="POST" style="display: none;"><input type="hidden" name="form_id" value="16940200977655"><input type="hidden" name="form_token" value="f4f683daeecc280e03f64585f8f59def">
+                                    <input type="hidden" name="_token" value=" ">
+                                </form>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+</div>        <!-- Stored in resources/views/child.blade.php -->
+
+<!-- Sidebar -->
+
+<div class="sidebar sidebar-style-2" data-background-color="dark">
+    <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+            <div class="user">
+                <div class="info">
+                    <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                        <span>
+                            {{user.username}}
+                            
+                            <span class="caret"></span>
+                        </span>
+                    </a>
+                    <div class="clearfix"></div>
+                    <div class="collapse in" id="collapseExample">
+                        <ul class="nav">
+                            <li>
+                                <a href="{% url 'user:profile' %}">
+                                    <span class="link-collapse">Account Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav nav-primary">
+                <li class="nav-item active">
+                    <a href="{% url 'user:dashboard' %}">
+                        <i class="fas fa-home"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a data-toggle="collapse" href="#bases">
+                        <i class="fas fa-user"></i>
+                        <p>Account</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="bases">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="{% url 'wallet:make_deposit' %}">
+                                    <span class="sub-item">Make Deposit</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Notifications</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'pages:about_page' %}">
+                        <i class="fa fa-life-ring" aria-hidden="true"></i>
+                        <p>Support</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'wallet:deposit_history' %}">
+                        <i class="fa fa-signal " aria-hidden="true"></i>
+                        <p>P/L record</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'wallet:deposit_history'%}">
+                        <i class="fa fa-briefcase " aria-hidden="true"></i>
+                        <p>Transactions history</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a data-toggle="collapse" href="#dept">
+                        <i class="fas fa-credit-card"></i>
+                        <p>Deposit/Withdrawal</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="dept">
+                        <ul class="nav nav-collapse">
+                             <li>
+                                <a href="{% url 'wallet:make_deposit' %}">
+                                    <span class="sub-item">Make Deposit</span>
+                                </a>
+                            </li>
+                            <li>
+
+                                <a href="{% url 'wallet:ask_for_withdraw' %}">
+                                    <span class="sub-item">Withdrawal</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'wallet:make_deposit' %}">
+                        <i class="fa fa-th" aria-hidden="true"></i>
+                        <p>Subscription Trade</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a data-toggle="collapse" href="#mpack">
+                        <i class="fas fa-cubes"></i>
+                        <p>Packages</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="mpack">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="{% url 'wallet:make_deposit' %}">
+                                    <span class="sub-item">Investment Plans</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'wallet:deposit_history' %}">
+                                    <span class="sub-item">My Packages</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>  
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fa fa-recycle " aria-hidden="true"></i>
+                        <p>Refer Users</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Sidebar -->
+<!-- Verify Modal -->
+
+<div class="modal fade" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+            <h5 class="modal-title text-light" style="text-align:center;">KYC verification - Upload documents below to get verified.</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-dark">
+                <form style="padding:3px;" role="form" method="post" action="https://icapitalnation.com/dashboard/savevdocs"  enctype="multipart/form-data">
+                    <label class="text-light">Valid identity card. (e.g. Drivers licence, international passport or any government approved document).</label>
+                    <input type="file" class="form-control bg-dark text-light" name="id" required><br>
+                    <label class="text-light">Passport photogragh</label>
+                    <input type="file" class="form-control bg-dark text-light" name="passport" required><br>
+                   <input type="hidden" name="_token" value="3BmmM4OuZe8M26H7pCldG7zPTJZ0Nq1vb4fl03zA">
+                   <input type="submit" class="btn btn-light" value="Submit documents">
+               </form>
+        </div>
+    </div>
+</div>
+</div>

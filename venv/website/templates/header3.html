@@ -1,0 +1,58 @@
+{% load static %}
+
+<header class="site-header header-style-3 topbar-transparent">
+	<div class="top-bar bg-secondry" style="background-color:purple;color:white;font-weight:700;padding:5px">
+<div class="container">
+<div class="row">
+<div class="clearfix">
+<div class="wt-topbar-left">
+<ul class="list-unstyled e-p-bx pull-left">
+<li><i class="fa fa-envelope"></i> support@fxsupertrading.com
+</li>
+
+</ul>
+</div>
+<div class="wt-topbar-right">
+<ul class="list-unstyled e-p-bx pull-right">
+<li><a href="{% url 'account_login' %}"><i class="fa fa-user"></i>Login</a></li>
+<li><a href="{% url 'account_signup' %}"><i class="fa fa-sign-in"></i>Register</a></li>
+	</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sticky-header main-bar-wraper">
+<div class="main-bar">
+<div class="container">
+<div class="logo-header mostion">
+<a href="{% url 'pages:home_page' %}">
+<img src="{% static 'logo.png' %}" width="230" height="67" alt="" />
+</a>
+</div>
+
+<button data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<div class="header-nav navbar-collapse collapse ">
+<ul class=" nav navbar-nav">
+<li class="active">
+<a href="{% url 'pages:home_page' %}">Home</a>
+</li>
+<li >
+<a href="{% url 'pages:about_page' %}">About Us</a>
+</li>
+<li >
+<a href="{% url 'pages:privacy_page' %}">Terms</a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+</header>

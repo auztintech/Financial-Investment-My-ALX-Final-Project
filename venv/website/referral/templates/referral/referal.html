@@ -1,0 +1,178 @@
+{% extends 'dashboard_base2.html' %}
+
+{% load static %}
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+                    <!-- Site Content Wrapper -->
+<div class="dt-content-wrapper">
+    <!-- Site Content -->
+    <div class="dt-content">
+        <!-- Profile -->
+        <div class="profile">
+            <!-- Profile Banner -->
+            <div class="profile__banner">
+                <!-- Page Header -->
+                <div class="dt-page__header">
+                    <h1 class="dt-page__title text-white display-i">
+                    Referral Link {{link}}
+                    </h1>
+                    
+                    <div class="dt-entry__header mt-1m">
+                        <!-- Entry Heading -->
+                        <div class="dt-entry__heading">
+                        </div>
+                        <!-- /entry heading -->
+                    </div>
+                </div>
+                <!-- /page header -->
+                <div class="profile__banner-detail">
+                    <!-- Avatar Wrapper -->
+                    <div class="col-12">
+                        <div class="row">
+
+                            <!-- Grid Item -->
+                            <div class="col-sm-6 col-12">
+
+                                <!-- Card -->
+                                <div class="dt-card dt-card__full-height text-dark">
+
+                                    <!-- Card Body -->
+                                    <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4">
+                                        <span class="badge badge-secondary badge-top-right">
+                                            Total referrals
+                                        </span>
+                                        <!-- Media -->
+                                        <div class="media">
+
+                                            <i style="font-size: 35px;margin-right: 10px;align-self: center;" class="fa fa-user-plus" aria-hidden="true"></i>
+
+                                            <!-- Media Body -->
+                                            <div class="media-body">
+                                                <div class="display-3 font-weight-600 mb-1 init-counter">
+                                                    0                                                </div>
+                                                <span class="d-block">
+                                                    Referral(s)
+                                                </span>
+                                            </div>
+                                            <!-- /media body -->
+
+                                        </div>
+                                        <!-- /media -->
+                                    </div>
+                                    <!-- /card body -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </div>
+                            <!-- Grid Item -->
+
+                            <!-- Grid Item -->
+                            <div class="col-sm-6 col-12">
+
+                                <!-- Card -->
+                                <div class="dt-card dt-card__full-height text-dark">
+
+                                    <!-- Card Body -->
+                                    <div class="dt-card__body p-xl-8 py-sm-8 py-6 px-4">
+                                        <span class="badge badge-secondary badge-top-right">
+                                            Referrals This Week
+                                        </span>
+                                        <!-- Media -->
+                                        <div class="media">
+
+                                            <i style="font-size: 35px;margin-right: 10px;align-self: center;" class="fa fa-user-plus" aria-hidden="true"></i>
+
+                                            <!-- Media Body -->
+                                            <div class="media-body">
+                                                <div class="display-3 font-weight-600 mb-1 init-counter">
+                                                    0                                                </div>
+                                                <span class="d-block">
+                                                    Referral(s) this week
+                                                </span>
+                                            </div>
+                                            <!-- /media body -->
+
+                                        </div>
+                                        <!-- /media -->
+                                    </div>
+                                    <!-- /card body -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </div>
+                            <!-- Grid Item -->
+
+                        </div>
+                    </div>
+                    <!-- /avatar wrapper -->
+                </div>
+
+            </div>
+            <!-- /profile banner -->
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+
+                <!-- Grid -->
+                <div class="row">
+
+                    <!-- Grid Item -->
+                    <div class="col-xl-12 col-12 order-xl-1">
+                        <!-- Card -->
+                        <div class="dt-card">
+
+                            <!-- Card Body -->
+                            <div class="dt-card__body">
+
+                                <!-- Tables -->
+                                <div class="table-responsive dataTables_wrapper dt-bootstrap4">
+                                    <div class="table-responsive">
+                                        <span class="d-block">
+                                        </span>
+                                            <div class="text-center mt-5">
+                                            <img src="{% static 'assets2/uploads/no-search-results.png' %}" class="w-20rm">
+                                            <h1>No records can be found</h1>
+                                        </div>
+                                                                            </div>
+                                    <!-- /tables -->
+
+                                </div>
+                                <!-- /card body -->
+
+                            </div>
+                            <!-- /card -->
+                        </div>
+                        <!-- /grid item -->
+                    </div>
+                    <!-- /grid -->
+
+                </div>
+                <!-- /profile content -->
+
+            </div>
+            <!-- /Profile -->
+
+        </div>
+    </div><!-- Footer -->
+<footer class="dt-footer">
+
+    Copyright Profit Option © 2023</footer>
+<!-- /footer -->
+
+</div>
+<!-- /site content wrapper -->
+</main>
+</div>
+</div>
+{% endblock content %}
